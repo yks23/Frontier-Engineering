@@ -60,6 +60,12 @@ For each instance:
 
 The final score is the mean instance score across all evaluation instances.
 
+This benchmark also exposes a unified reference field:
+
+- `human_best_score = 0.7967499751439758`
+
+This value is converted from public best-known makespans (`ta01=1231`, `ta02=1244`, `ta11=1357`) using the same score definition.
+
 Invalid output receives:
 
 - `valid = 0`

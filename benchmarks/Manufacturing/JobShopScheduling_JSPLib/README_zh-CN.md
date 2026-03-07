@@ -17,6 +17,11 @@ python3 -m frontier_eval task=jobshop_scheduling algorithm.iterations=0
 - `verification/evaluator.py`：评测入口
 - `frontier_eval/`：unified task 接入元数据
 
+## 参考分数
+
+- `human_best_score = 0.7967499751439758`
+- 该值由公开 best-known makespan（`ta01=1231`, `ta02=1244`, `ta11=1357`）按本任务评分公式换算得到
+
 ## 注册的 task_name
 
 `jobshop_scheduling`

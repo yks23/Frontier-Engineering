@@ -148,6 +148,7 @@ copy_files.txt           # 可选：复制到临时沙箱的文件/目录列表
 readonly_files.txt       # 可选：运行前后必须保持不变的文件/目录
 artifact_files.txt       # 可选：由框架自动收集的输出文件/目录
 constraints.txt          # 可选：约束/提示词文本
+human_best_score.txt     # 可选：人类最佳 / 已知最佳参考分数（与 combined_score 同尺度）
 ```
 
 行列表类型的 `*.txt`（如 `initial_program.txt`、`candidate_destination.txt`、`agent_files.txt`、`artifact_files.txt` 等）规则：
@@ -168,6 +169,7 @@ constraints.txt          # 可选：约束/提示词文本
 - `readonly_files.txt`：评测前后做指纹校验的路径，变化即判为 invalid。
 - `artifact_files.txt`：评测结束后由 unified 框架自动采集到 artifacts 的文件/目录（如日志、stdout/stderr 输出文件），避免用户自己写 artifacts 导出代码。
 - `constraints.txt`：自由文本约束，会作为 artifacts 提供给 agent 上下文。
+- `human_best_score.txt`：可选参考分数。若提供，Unified 会将其写入 metrics/artifacts，便于后续计算与人类最佳的差距。
 
 #### 占位符说明
 

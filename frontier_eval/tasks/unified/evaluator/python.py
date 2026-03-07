@@ -217,6 +217,10 @@ def _append_agent_context(spec: UnifiedTaskSpec, artifacts: dict[str, Any]) -> N
         artifacts["constraints_path"] = str(spec.constraints_path)
     if spec.constraints_text:
         artifacts["constraints"] = _truncate_middle(spec.constraints_text, limit=120_000)
+    if spec.human_best_score_path is not None:
+        artifacts["human_best_score_path"] = str(spec.human_best_score_path)
+    if spec.human_best_score is not None:
+        artifacts["human_best_score"] = float(spec.human_best_score)
 
     if not spec.agent_files:
         return
@@ -342,6 +346,8 @@ def evaluate(program_path: str, *, spec: UnifiedTaskSpec) -> Any:
         "eval_cwd_rel": spec.eval_cwd_rel,
         "eval_command_template": spec.eval_command,
     }
+    if spec.human_best_score is not None:
+        metrics["human_best_score"] = float(spec.human_best_score)
     _append_agent_context(spec, artifacts)
 
     if not spec.benchmark_dir.is_dir():
@@ -540,6 +546,12 @@ def evaluate(program_path: str, *, spec: UnifiedTaskSpec) -> Any:
                 artifacts["readonly_violations"] = "\n".join(violations[:200])
                 if "error_message" not in artifacts:
                     artifacts["error_message"] = "readonly files modified by evaluation run"
+
+        if spec.human_best_score is not None:
+            metrics["human_best_score"] = float(spec.human_best_score)
+            combined_score = metrics.get("combined_score", None)
+            if isinstance(combined_score, (int, float)) and not isinstance(combined_score, bool):
+                metrics["gap_to_human_best"] = float(spec.human_best_score) - float(combined_score)
 
         metrics["runtime_s"] = float(time.time() - start)
         return _wrap(metrics, artifacts)
