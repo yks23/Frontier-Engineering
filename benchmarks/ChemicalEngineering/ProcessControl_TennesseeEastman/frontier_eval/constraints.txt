@@ -1,0 +1,7 @@
+ProcessControl_TennesseeEastman UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <instance.json> --output <control.json>`.
+3) Control length must equal horizon.
+4) Control values must stay inside bounds.
+5) Process variable must stay inside the safe range.
+6) Higher combined_score is better.
