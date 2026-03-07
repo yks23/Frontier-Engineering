@@ -1,0 +1,7 @@
+name: unified
+benchmark: MaterialsEngineering/MaterialsDiscovery_MatBench
+
+runtime:
+  python_path: /usr/bin/python3
+  use_conda_run: false
+  shell: bash
