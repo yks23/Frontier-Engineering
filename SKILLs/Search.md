@@ -9,6 +9,14 @@
 - 明确输入输出协议
 - 可自动评测的指标
 
+## 进入状态
+
+以下情况进入 `Search`：
+
+- 主流程开始
+- 上一个题目在 `Verification` 连续失败 5 次后被放弃
+- 上一个题目已经完成 `PullRequest`，继续寻找下一个题
+
 ## 搜索流程
 
 ### 1. 先判断当前仓库里的题型本质
@@ -103,6 +111,39 @@
 |---|---|---|---|---|---|
 
 之后再进入 proposal/report 阶段。
+
+## 状态转移
+
+### 成功转移
+
+当下面这些信息已经足够清楚，并写成 proposal 后，转到 `Transformation`：
+
+- 来源链接
+- 工程场景
+- 输入 / 输出
+- validity
+- score
+- 主要风险
+
+建议产出：
+
+- `proposals/README_zh-CN.md`
+- `proposals/<Domain>/<Task>/report_zh-CN.md`
+
+### 失败转移
+
+如果当前候选题存在以下问题，则保持在 `Search`，继续换题：
+
+- 题源不稳定
+- 无法定义 evaluator
+- 依赖过重
+- 输出契约不清晰
+- 现实价值不足
+
+也就是说：
+
+- **proposal 完整**：`Search -> Transformation`
+- **proposal 不成立**：`Search -> Search`
 
 ## 经验总结
 

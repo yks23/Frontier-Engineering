@@ -9,6 +9,13 @@
 - 有效
 - 能接入主框架
 
+## 进入状态
+
+从 `Transformation` 进入。进入前应当已经存在：
+
+- `proposals/<Domain>/<Task>/report_zh-CN.md`
+- `benchmarks/<Domain>/<Task>/...`
+
 ## 最小验证流程
 
 ### 1. 先做语法和路径检查
@@ -65,11 +72,48 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - baseline 与 human best 分别是什么
 - 是否存在明显不公平依赖
 
+## 状态转移
+
+### 成功转移
+
+满足以下条件时，转到 `PullRequest`：
+
+- 本地 evaluator 通过
+- `frontier_eval` 集成通过
+- `valid = 1`
+- `combined_score` 正常产生
+
+### 失败转移
+
+若一次验证失败，不直接放弃，而是：
+
+1. 记录失败原因
+2. 回到 `Transformation`
+3. 修正实现后再次回到 `Verification`
+
+### 最大尝试次数
+
+若连续尝试 **5 次** 仍无法得到有效解，则认为当前题目不适合继续投入，执行：
+
+1. 删除 proposal：
+   - `proposals/<Domain>/<Task>/`
+2. 删除对应 benchmark 代码：
+   - `benchmarks/<Domain>/<Task>/`
+3. 若存在 task 别名配置，也删除：
+   - `frontier_eval/conf/task/<task_name>.yaml`
+4. 回到 `Search`
+
+也就是说：
+
+- **短期失败**：`Verification -> Transformation`
+- **5 次失败仍无有效解**：`Verification -> Search`
+
 ## 关键点
 
 - 先验证合法性，再看分数高低
 - 本地 evaluator 和主框架都必须跑通
 - 测试产物不要提交进仓库
 - 如果支持 `human_best_score`，确认其已进入 metrics/artifacts
+- 5 次失败后不要继续堆补丁，直接删题回到 Search
 
 <!-- AI_GENERATED -->

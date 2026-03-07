@@ -9,6 +9,27 @@
 3. 验证 / 跑通
 4. 提 PR / 提交
 
+## 主循环
+
+设：
+
+- `target_pr_count = 10`
+- `current_pr_count = 已完成的新题 PR 数量`
+
+总循环规则：
+
+- 只要 `current_pr_count < target_pr_count`，就从 `Search` 开始下一题
+- 只有当 `current_pr_count >= target_pr_count` 时，主流程才停止
+
+状态机可写成：
+
+`Search -> Transformation -> Verification -> PullRequest -> Search`
+
+其中：
+
+- `Verification` 失败时会回退
+- `PullRequest` 成功时 `current_pr_count += 1`
+
 ---
 
 ## Step 1 — Search
@@ -39,6 +60,11 @@
 - 风险
 
 如果这些不清楚，不进入 Step 2。
+
+### 状态转移
+
+- proposal 完整：`Search -> Transformation`
+- proposal 不成立：`Search -> Search`
 
 ---
 
@@ -82,6 +108,11 @@
 
 任务目录结构完整，baseline 自包含，可被 evaluator 调用。
 
+### 状态转移
+
+- 最小骨架完成：`Transformation -> Verification`
+- 任务契约无法落地：`Transformation -> Search`
+
 ---
 
 ## Step 3 — Verification
@@ -121,6 +152,18 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - baseline 被主框架成功加载
 
 如果有 `human_best_score`，也要确认它进入了 metrics / artifacts。
+
+### 状态转移
+
+- 验证通过：`Verification -> PullRequest`
+- 单次失败：`Verification -> Transformation`
+- 连续 5 次失败仍无有效解：删除 proposal 与对应代码后 `Verification -> Search`
+
+删除路径应包括：
+
+- `proposals/<Domain>/<Task>/`
+- `benchmarks/<Domain>/<Task>/`
+- `frontier_eval/conf/task/<task_name>.yaml`（若存在）
 
 ---
 
@@ -167,6 +210,12 @@ git push
 - commit 已推送
 - 测试证据明确可复现
 
+### 状态转移
+
+- PR 成功：`PullRequest -> Search`，同时 `current_pr_count += 1`
+- 若 `current_pr_count >= target_pr_count`：`PullRequest -> Stop`
+- PR 准备不足：`PullRequest -> Verification`
+
 ---
 
 ## 四步顺序要求
@@ -177,6 +226,7 @@ git push
 2. **Transformation**：没有最小骨架，不做验证
 3. **Verification**：没有测试通过，不做提交
 4. **Pull Request**：没有清理产物，不做最终提交
+5. **Loop**：没有完成 10 个新题 PR，就继续回到 `Search`
 
 ---
 
@@ -184,9 +234,11 @@ git push
 
 后续可以把任务理解成：
 
-> 先按 `SKILLs/Search.md` 找题并写 proposal；  
+> 当 `current_pr_count < 10` 时，先按 `SKILLs/Search.md` 找题并写 proposal；  
 > 再按 `SKILLs/Transformation.md` 落成 benchmark；  
 > 再按 `SKILLs/Verification.md` 跑本地与框架测试；  
-> 最后按 `SKILLs/PullRequest.md` 清理、提交、推送。
+> 若验证失败则回退，若连续 5 次失败则删题回到 Search；  
+> 若验证成功，再按 `SKILLs/PullRequest.md` 清理、提交、推送；  
+> PR 成功后 `current_pr_count += 1`，若未达 10 则继续下一轮。
 
 <!-- AI_GENERATED -->

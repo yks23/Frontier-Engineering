@@ -4,6 +4,12 @@
 
 把一个“题目汇报 / proposal / report”转成能进入主仓库的实际任务骨架，而不是停留在概念层。
 
+## 进入状态
+
+从 `Search` 进入。进入前应当已经存在：
+
+- `proposals/<Domain>/<Task>/report_zh-CN.md`
+
 ## 流程
 
 ### 1. 先确认题目是否值得落地
@@ -69,6 +75,40 @@ baseline 不必强，但必须：
 - 怎么跑
 - 怎么评分
 
+## 状态转移
+
+### 成功转移
+
+当最小任务骨架已经形成时，转到 `Verification`：
+
+- baseline 自包含
+- evaluator 可调用
+- unified 元数据已补齐（若适用）
+- README / Task 文档可供检查
+
+目标路径通常是：
+
+- `benchmarks/<Domain>/<Task>/`
+- `frontier_eval/conf/task/<task_name>.yaml`（若需要）
+
+### 失败转移
+
+若在转化过程中发现 proposal 本身无法闭合，例如：
+
+- 输入输出无法定义
+- evaluator 难以稳定实现
+- baseline 无法做成最小可运行版本
+
+则删除半成品代码并回到 `Search`：
+
+- 删除 `benchmarks/<Domain>/<Task>/`
+- 删除 `frontier_eval/conf/task/<task_name>.yaml`（若已创建）
+
+也就是说：
+
+- **最小骨架完成**：`Transformation -> Verification`
+- **任务契约无法落地**：`Transformation -> Search`
+
 ## 关键点
 
 - 先做可运行，再做高级版本
@@ -76,5 +116,6 @@ baseline 不必强，但必须：
 - validity 必须比 score 更硬
 - 尽量优先接入 unified，减少专门 task 代码
 - proposal 里的“人类最佳 / best-known”最好同步补成元数据
+- 做不出最小闭环时，不要硬撑，直接回 Search
 
 <!-- AI_GENERATED -->
