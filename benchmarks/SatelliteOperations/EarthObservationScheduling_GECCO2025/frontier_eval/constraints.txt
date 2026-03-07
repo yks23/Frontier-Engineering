@@ -1,0 +1,7 @@
+EarthObservationScheduling_GECCO2025 UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <instance.json> --output <plan.json>`.
+3) Each selected observation must exist in the opportunity table.
+4) Consecutive observations must respect slew time and time windows.
+5) The planning horizon must not be exceeded.
+6) Higher combined_score is better.
