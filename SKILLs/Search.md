@@ -1,0 +1,147 @@
+# Search Skill: 从公开网页中寻找可转化为 Frontier-Eng 的工程题
+
+## 目标
+
+当需要为仓库补充新 benchmark 时，不要只找“相似算法题”，而要优先找能够落成真实工程任务的公开来源：
+
+- benchmark / competition / challenge
+- 官方数据集或标准实例库
+- 明确输入输出协议
+- 可自动评测的指标
+
+## 搜索流程
+
+### 1. 先判断当前仓库里的题型本质
+
+先读仓库总 README 和对应任务文档，判断现有题到底属于哪一类：
+
+- 设计优化
+- 控制
+- 仿真
+- 预测
+- 调度
+- 系统实现优化
+
+避免只按表面关键词搜索。
+
+### 2. 用“题型 + benchmark / challenge / official”搜索，而不是只搜领域名
+
+更高效的关键词模板：
+
+- `<domain> benchmark official`
+- `<domain> challenge official`
+- `<domain> competition benchmark`
+- `<task type> dataset evaluator`
+- `<task type> open source benchmark`
+
+示例：
+
+- `optimal power flow benchmark official`
+- `traffic signal control benchmark SUMO`
+- `building HVAC control benchmark official`
+- `materials discovery benchmark official`
+
+### 3. 优先找四类来源
+
+按优先级排序：
+
+1. 官方 benchmark / competition 页面
+2. 官方 GitHub 仓库
+3. 配套论文或组织主页
+4. 可公开下载的数据与评测说明
+
+如果只有论文、没有数据或评测协议，转化成本通常偏高。
+
+### 4. 判断是否适合转成 Frontier-Eng
+
+一个候选题至少检查这几项：
+
+- **现实差距**：是不是贴近真实工程，而不是纯抽象数学题
+- **经济价值**：优化结果是否会影响成本、效率、质量、安全或收益
+- **可验证性**：能否写出稳定 evaluator
+- **预算可控**：单次评测是否能在可接受时间内完成
+- **输入输出清晰**：是否能形成 submission 契约
+
+## 搜索时的判断框架
+
+找到链接后，不要只记“这是什么比赛”，而要继续判断：
+
+### A. 可以转成什么任务形式
+
+- 参数优化
+- 路径/调度规划
+- 控制器设计
+- 稀疏观测重建
+- 结构/材料选择
+- 高性能实现优化
+
+### B. 评测器怎么写
+
+至少要能回答：
+
+- 输入是什么
+- 输出是什么
+- validity 怎么判
+- score 怎么算
+- 是否需要 Docker / GPU / 第三方数据
+
+### C. 风险在哪里
+
+常见风险：
+
+- 依赖过重
+- 数据授权不清楚
+- 评测时间太长
+- 容易被硬编码刷分
+- 任务太像普通 ML leaderboard，不像工程 benchmark
+
+## 产出格式建议
+
+先做成一个统一表格，再决定是否立项：
+
+| 领域 | 来源链接 | 工程场景 | 可转化任务 | 评分方式 | 落地难度 |
+|---|---|---|---|---|---|
+
+之后再进入 proposal/report 阶段。
+
+## 经验总结
+
+### 1. 不要只沿着仓库现有领域搜
+
+如果用户说“希望越多样越好”，要主动扩到：
+
+- 电力系统
+- 建筑能源
+- 制造调度
+- 水务
+- 农业
+- 港口
+- 材料
+- 增材制造
+- 电池
+- 遥感卫星
+- 仓储机器人
+
+### 2. 最容易落地的题往往不是最炫的题
+
+优先做这些：
+
+- 有公开 benchmark 实例
+- 有简单明确的 submission 格式
+- 有轻量 evaluator
+- 不依赖罕见商业软件
+
+### 3. 最终要沉淀成 proposal，而不是只给链接
+
+真正可用的搜索结果应该进一步写成：
+
+- 来源
+- 工程背景
+- 转化方案
+- 输入输出
+- 评分方案
+- 实现风险
+
+这样维护者才能快速 review 是否值得立项。
+
+<!-- AI_GENERATED -->

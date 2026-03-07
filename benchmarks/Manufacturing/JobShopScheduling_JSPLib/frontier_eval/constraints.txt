@@ -1,0 +1,13 @@
+JobShopScheduling_JSPLib UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) The evaluator calls the candidate as:
+   `python3 scripts/init.py --instance <instance.json> --output <submission.json> --time-budget <seconds>`.
+3) Candidate must write a JSON file containing `operations`, where each operation has:
+   - `job`
+   - `op`
+   - `machine`
+   - `start`
+4) All start times must be non-negative integers.
+5) Every operation must appear exactly once, use the correct machine, respect job precedence,
+   and avoid machine overlaps.
+6) Optimize for lower makespan; the evaluator converts it to a score via `lower_bound / makespan`.
