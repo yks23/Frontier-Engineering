@@ -1,0 +1,7 @@
+WindFarmLayoutOptimization UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <site.json> --output <layout.json>`.
+3) Candidate must output exactly the required number of turbines.
+4) Every turbine must stay inside the site bounds.
+5) Every turbine pair must satisfy the minimum spacing.
+6) Higher combined_score is better.
