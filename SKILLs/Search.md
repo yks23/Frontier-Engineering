@@ -17,6 +17,17 @@
 - 上一个题目在 `Verification` 连续失败 5 次后被放弃
 - 上一个题目已经完成 `PullRequest`，继续寻找下一个题
 
+## 优先级规则
+
+进入 `Search` 后，先检查：
+
+- `proposals/`
+- `proposals/<Domain>/<Task>/report_zh-CN.md`
+
+如果仓库里已经存在**尚未转成 benchmark 的 proposal**，则**不要继续新搜题**，而是优先消费这些已有提案，直接转到 `Transformation`。
+
+只有当没有待处理 proposal 时，才真正执行新的网页搜索。
+
 ## 搜索流程
 
 ### 1. 先判断当前仓库里的题型本质
@@ -116,6 +127,16 @@
 
 ### 成功转移
 
+有两种成功转移方式：
+
+#### A. 已有 proposal 待处理
+
+若 `proposals/` 中已有尚未落地的提案，则：
+
+- **直接** `Search -> Transformation`
+
+#### B. 新搜索完成 proposal
+
 当下面这些信息已经足够清楚，并写成 proposal 后，转到 `Transformation`：
 
 - 来源链接
@@ -142,7 +163,8 @@
 
 也就是说：
 
-- **proposal 完整**：`Search -> Transformation`
+- **已有 proposal**：`Search -> Transformation`
+- **新 proposal 完整**：`Search -> Transformation`
 - **proposal 不成立**：`Search -> Search`
 
 ## 经验总结

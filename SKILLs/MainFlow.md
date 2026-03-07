@@ -20,6 +20,8 @@
 
 - 只要 `current_pr_count < target_pr_count`，就从 `Search` 开始下一题
 - 只有当 `current_pr_count >= target_pr_count` 时，主流程才停止
+- 进入 `Search` 后，**优先处理 `proposals/` 中已有待落地 proposal**
+- 只有当没有待处理 proposal 时，才执行新的网页搜题
 
 状态机可写成：
 
@@ -40,7 +42,10 @@
 
 ### 要做什么
 
-从公开 benchmark / competition / dataset 中找候选题，先判断是否值得立项。
+先检查 `proposals/` 中是否已有待处理提案：
+
+- 如果有：直接挑一个进入 `Transformation`
+- 如果没有：再从公开 benchmark / competition / dataset 中找候选题
 
 ### 产出路径
 
@@ -63,7 +68,8 @@
 
 ### 状态转移
 
-- proposal 完整：`Search -> Transformation`
+- 已有 proposal 待处理：`Search -> Transformation`
+- 新 proposal 完整：`Search -> Transformation`
 - proposal 不成立：`Search -> Search`
 
 ---
@@ -235,6 +241,7 @@ git push
 后续可以把任务理解成：
 
 > 当 `current_pr_count < 10` 时，先按 `SKILLs/Search.md` 找题并写 proposal；  
+> 若 `proposals/` 中已有待处理 proposal，则优先直接进入 `Transformation`；  
 > 再按 `SKILLs/Transformation.md` 落成 benchmark；  
 > 再按 `SKILLs/Verification.md` 跑本地与框架测试；  
 > 若验证失败则回退，若连续 5 次失败则删题回到 Search；  
