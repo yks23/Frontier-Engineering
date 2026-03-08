@@ -9,11 +9,6 @@ import traceback
 from pathlib import Path
 
 
-def load_instance(path: Path) -> dict:
-    with open(path, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-
 def load_json(path: Path) -> dict:
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
@@ -97,10 +92,10 @@ def evaluate(candidate: str) -> tuple[dict, dict]:
         proc = subprocess.run([sys.executable, str(candidate_path), '--instance', str(instance_path), '--output', str(output_path)], capture_output=True, text=True, timeout=30)
         if proc.returncode != 0:
             raise RuntimeError(
-                f"candidate failed\\nSTDOUT:\\n{proc.stdout}\\nSTDERR:\\n{proc.stderr}"
+                f"candidate failed\nSTDOUT:\n{proc.stdout}\nSTDERR:\n{proc.stderr}"
             )
         submission = load_json(output_path)
-        instance = load_instance(instance_path)
+        instance = load_json(instance_path)
         scored = validate(instance, submission)
         metrics = {'combined_score': scored['combined_score'], 'valid': 1.0, 'timeout': 0.0, 'runtime_s': 0.0, 'makespan': scored['makespan'], 'sum_of_costs': scored['sum_of_costs']}
         artifacts = {'instance_id': instance['instance_id'], 'submission': submission}
