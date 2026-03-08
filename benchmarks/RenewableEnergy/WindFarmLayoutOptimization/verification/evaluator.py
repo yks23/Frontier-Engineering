@@ -69,7 +69,7 @@ def evaluate(candidate: str):
         proc = subprocess.run([sys.executable, str(candidate_path), '--instance', str(site_path), '--output', str(out)], capture_output=True, text=True, timeout=30)
         if proc.returncode != 0:
             raise RuntimeError(
-                f"candidate failed\\nSTDOUT:\\n{proc.stdout}\\nSTDERR:\\n{proc.stderr}"
+                f"candidate failed\nSTDOUT:\n{proc.stdout}\nSTDERR:\n{proc.stderr}"
             )
         site = load_json(site_path)
         layout = load_json(out)
