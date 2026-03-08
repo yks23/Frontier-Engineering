@@ -23,6 +23,6 @@ Write `control.json`:
 
 `combined_score = -(tracking_error + 0.1 * control_effort + 0.2 * recovery_time)`
 
-Higher is better. Invalid output receives score 0.
+Higher is better. Invalid output receives a very low sentinel score.
 
 <!-- AI_GENERATED -->

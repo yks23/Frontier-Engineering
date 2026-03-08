@@ -23,6 +23,6 @@
 
 `combined_score = -(tracking_error + 0.1 * control_effort + 0.2 * recovery_time)`
 
-越大越好，非法输出记 0 分。
+越大越好，非法输出会被赋予一个极低的哨兵分数。
 
 <!-- AI_GENERATED -->

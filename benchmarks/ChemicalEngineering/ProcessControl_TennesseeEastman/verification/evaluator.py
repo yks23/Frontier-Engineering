@@ -8,6 +8,8 @@ import tempfile
 import traceback
 from pathlib import Path
 
+INVALID_SCORE = -1e18
+
 
 def load_json(path: Path) -> dict:
     with open(path, 'r', encoding='utf-8') as f:
@@ -64,9 +66,9 @@ def main() -> None:
     try:
         metrics, artifacts = evaluate(args.candidate)
     except subprocess.TimeoutExpired as exc:
-        metrics = {'combined_score': 0.0, 'valid': 0.0, 'timeout': 1.0, 'runtime_s': 0.0}; artifacts = {'error': f'timeout: {exc}'}
+        metrics = {'combined_score': INVALID_SCORE, 'valid': 0.0, 'timeout': 1.0, 'runtime_s': 0.0}; artifacts = {'error': f'timeout: {exc}'}
     except Exception as exc:
-        metrics = {'combined_score': 0.0, 'valid': 0.0, 'timeout': 0.0, 'runtime_s': 0.0}; artifacts = {'error': str(exc), 'traceback': traceback.format_exc()}
+        metrics = {'combined_score': INVALID_SCORE, 'valid': 0.0, 'timeout': 0.0, 'runtime_s': 0.0}; artifacts = {'error': str(exc), 'traceback': traceback.format_exc()}
     with open(Path.cwd() / 'metrics.json', 'w', encoding='utf-8') as f: json.dump(metrics, f, indent=2)
     with open(Path.cwd() / 'artifacts.json', 'w', encoding='utf-8') as f: json.dump(artifacts, f, indent=2)
     print(json.dumps(metrics))
