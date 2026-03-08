@@ -2,6 +2,6 @@ name: unified
 benchmark: SatelliteOperations/EarthObservationScheduling_GECCO2025
 
 runtime:
-  python_path: /usr/bin/python3
+  python_path: ${oc.env:FRONTIER_EVAL_UNIFIED_PYTHON,python3}
   use_conda_run: false
   shell: bash

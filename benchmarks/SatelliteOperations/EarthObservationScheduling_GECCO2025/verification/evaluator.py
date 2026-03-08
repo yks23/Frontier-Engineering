@@ -49,7 +49,7 @@ def validate(instance: dict, plan: dict) -> dict:
         prev_angle = float(obs['angle'])
         total_reward += float(obs['reward'])
         total_slew += float(need_slew)
-    score = max(0.0, total_reward - 0.1 * total_slew)
+    score = total_reward - 0.1 * total_slew
     return {'combined_score': score, 'total_reward': total_reward, 'slew_cost': total_slew}
 
 
@@ -64,7 +64,7 @@ def evaluate(candidate: str):
         proc = subprocess.run([sys.executable, str(candidate_path), '--instance', str(instance_path), '--output', str(out)], capture_output=True, text=True, timeout=30)
         if proc.returncode != 0:
             raise RuntimeError(
-                f"candidate failed\\nSTDOUT:\\n{proc.stdout}\\nSTDERR:\\n{proc.stderr}"
+                f"candidate failed\nSTDOUT:\n{proc.stdout}\nSTDERR:\n{proc.stderr}"
             )
         scored = validate(load_json(instance_path), load_json(out))
         metrics = {'combined_score': float(scored['combined_score']), 'valid': 1.0, 'timeout': 0.0, 'runtime_s': 0.0, 'total_reward': float(scored['total_reward']), 'slew_cost': float(scored['slew_cost'])}
