@@ -17,6 +17,23 @@
 - 测试证据可复现
 - 当前题已在独立分支中开发完成
 
+## 前置凭证要求
+
+如果这一阶段不仅要 push 分支，还要**真正创建 GitHub PR 对象**，则必须具备以下至少一种能力：
+
+1. **可写 GitHub token**
+   - 例如带 Pull Request 写权限的 token
+2. **等价的可写 PR API / 工具**
+   - 例如内部 MCP 工具或平台提供的 CreatePullRequest 能力
+
+如果没有这些能力，就只能做到：
+
+- push 分支
+- 生成 PR 标题与描述
+- 给出 PR 创建链接
+
+但**不能真正创建 PR 对象**。
+
 ## 流程
 
 ### 1. 提交前先清理
@@ -28,6 +45,20 @@
 - 临时日志
 - 本地测试产物
 - 绝对路径
+
+### 1.5 创建 PR 前先检查凭证
+
+若当前任务要求“真的创建 GitHub PR 对象”，则先检查是否已提供：
+
+- GitHub token
+- 或等价的 PR 创建 API/tool
+
+若**未提供**，则在此步骤停止，并明确要求用户提供：
+
+- 可写 GitHub token
+- 或可写 PR 工具
+
+不要假设只靠只读 `gh` 或普通 git push 就能创建 PR。
 
 ### 2. commit 要按逻辑拆分
 
@@ -109,6 +140,7 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - 有未清理的测试产物
 - commit 内容混乱
 - reviewer 关键信息缺失
+- 需要创建 PR，但没有提供可写 token / PR API / PR 工具
 
 则回到 `Verification` 或补充修正后再提交。
 
@@ -124,5 +156,6 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - 对 benchmark 类改动，要说明 baseline、score、validity 和运行方式
 - 每个题一个分支、一个 PR
 - 每完成一个可提交 PR，计数 +1，然后继续下一个题
+- 如果任务要求“创建 GitHub PR 对象”，没有 token 或可写 PR 工具时必须向用户索取
 
 <!-- AI_GENERATED -->
