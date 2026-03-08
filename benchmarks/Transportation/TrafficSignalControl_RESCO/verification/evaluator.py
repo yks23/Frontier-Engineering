@@ -29,13 +29,15 @@ def simulate(instance: dict, plan: dict) -> dict:
             raise ValueError('phase must be 0 or 1')
         ns_q += int(instance['ns_arrivals'][t])
         ew_q += int(instance['ew_arrivals'][t])
+        # Waiting counts vehicles that are queued at the start of this control interval.
+        total_wait += ns_q + ew_q
         served = min(int(instance['service_rate']), ns_q if phase == 0 else ew_q)
         if phase == 0:
             ns_q -= served
         else:
             ew_q -= served
         throughput += served
-        total_wait += ns_q + ew_q
+        # Queue length measures the backlog remaining after service.
         total_queue += ns_q + ew_q
     mean_wait = total_wait / int(instance['horizon'])
     mean_queue = total_queue / int(instance['horizon'])
