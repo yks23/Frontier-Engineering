@@ -8,8 +8,7 @@
         0.8,
         0.2,
         0.5
-      ],
-      "hidden_property": 0.71
+      ]
     },
     {
       "candidate_id": "mat_002",
@@ -17,8 +16,7 @@
         0.4,
         0.9,
         0.3
-      ],
-      "hidden_property": 0.62
+      ]
     },
     {
       "candidate_id": "mat_003",
@@ -26,8 +24,7 @@
         0.2,
         0.1,
         0.7
-      ],
-      "hidden_property": 0.58
+      ]
     },
     {
       "candidate_id": "mat_004",
@@ -35,8 +32,7 @@
         0.7,
         0.8,
         0.6
-      ],
-      "hidden_property": 0.83
+      ]
     },
     {
       "candidate_id": "mat_005",
@@ -44,8 +40,7 @@
         0.9,
         0.4,
         0.8
-      ],
-      "hidden_property": 0.88
+      ]
     },
     {
       "candidate_id": "mat_006",
@@ -53,8 +48,7 @@
         0.5,
         0.5,
         0.5
-      ],
-      "hidden_property": 0.64
+      ]
     },
     {
       "candidate_id": "mat_007",
@@ -62,8 +56,7 @@
         0.3,
         0.7,
         0.2
-      ],
-      "hidden_property": 0.55
+      ]
     },
     {
       "candidate_id": "mat_008",
@@ -71,8 +64,7 @@
         0.85,
         0.6,
         0.9
-      ],
-      "hidden_property": 0.92
+      ]
     },
     {
       "candidate_id": "mat_009",
@@ -80,8 +72,7 @@
         0.1,
         0.4,
         0.6
-      ],
-      "hidden_property": 0.49
+      ]
     },
     {
       "candidate_id": "mat_010",
@@ -89,8 +80,7 @@
         0.95,
         0.3,
         0.7
-      ],
-      "hidden_property": 0.86
+      ]
     },
     {
       "candidate_id": "mat_011",
@@ -98,8 +88,7 @@
         0.65,
         0.75,
         0.55
-      ],
-      "hidden_property": 0.79
+      ]
     },
     {
       "candidate_id": "mat_012",
@@ -107,8 +96,7 @@
         0.55,
         0.2,
         0.95
-      ],
-      "hidden_property": 0.77
+      ]
     }
   ]
 }

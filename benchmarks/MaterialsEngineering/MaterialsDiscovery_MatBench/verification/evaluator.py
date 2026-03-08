@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -14,7 +15,7 @@ def load_json(path: Path) -> dict:
         return json.load(f)
 
 
-def validate(data: dict, submission: dict) -> dict:
+def validate(data: dict, labels: dict, submission: dict) -> dict:
     table = {c['candidate_id']: c for c in data['candidates']}
     budget = int(data['budget'])
     query_order = submission.get('query_order')
@@ -28,7 +29,7 @@ def validate(data: dict, submission: dict) -> dict:
     for cid in query_order + selected:
         if cid not in table:
             raise ValueError('unknown candidate id')
-    vals = [float(table[c]['hidden_property']) for c in selected]
+    vals = [float(labels[c]) for c in selected]
     best = max(vals)
     mean = sum(vals) / len(vals)
     eff = 1.0 - len(query_order) / budget
@@ -38,7 +39,13 @@ def validate(data: dict, submission: dict) -> dict:
 
 def evaluate(candidate: str):
     task_root = Path(__file__).resolve().parent.parent
-    instance_path = task_root / 'references' / 'candidates.json'
+    instance_path = task_root / 'references' / 'candidates_public.json'
+    hidden_path = task_root / 'references' / 'candidates_hidden.json'
+    source_root_raw = os.environ.get('FRONTIER_EVAL_UNIFIED_SOURCE_BENCHMARK_DIR', '').strip()
+    if source_root_raw:
+        candidate_hidden = Path(source_root_raw) / 'references' / 'candidates_hidden.json'
+        if candidate_hidden.is_file():
+            hidden_path = candidate_hidden
     candidate_path = (Path.cwd() / candidate).resolve() if not Path(candidate).is_absolute() else Path(candidate)
     if not candidate_path.is_file():
         candidate_path = (task_root / candidate).resolve()
@@ -47,9 +54,9 @@ def evaluate(candidate: str):
         proc = subprocess.run([sys.executable, str(candidate_path), '--instance', str(instance_path), '--output', str(out)], capture_output=True, text=True, timeout=30)
         if proc.returncode != 0:
             raise RuntimeError(
-                f"candidate failed\\nSTDOUT:\\n{proc.stdout}\\nSTDERR:\\n{proc.stderr}"
+                f"candidate failed\nSTDOUT:\n{proc.stdout}\nSTDERR:\n{proc.stderr}"
             )
-        scored = validate(load_json(instance_path), load_json(out))
+        scored = validate(load_json(instance_path), load_json(hidden_path)['labels'], load_json(out))
         metrics = {'combined_score': float(scored['combined_score']), 'valid': 1.0, 'timeout': 0.0, 'runtime_s': 0.0, 'best_property_found': float(scored['best_property_found']), 'topk_mean_property': float(scored['topk_mean_property']), 'query_efficiency': float(scored['query_efficiency'])}
         artifacts = {'submission': load_json(out)}
         return metrics, artifacts

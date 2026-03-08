@@ -3,5 +3,5 @@ README.md
 Task_zh-CN.md
 Task.md
 verification/evaluator.py
-references/candidates.json
+references/candidates_public.json
 frontier_eval/constraints.txt

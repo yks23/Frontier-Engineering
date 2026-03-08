@@ -1,0 +1,15 @@
+README_zh-CN.md
+README.md
+Task_zh-CN.md
+Task.md
+scripts/init.py
+verification/evaluator.py
+verification/requirements.txt
+references/candidates_public.json
+frontier_eval/initial_program.txt
+frontier_eval/candidate_destination.txt
+frontier_eval/eval_command.txt
+frontier_eval/eval_cwd.txt
+frontier_eval/agent_files.txt
+frontier_eval/constraints.txt
+frontier_eval/copy_files.txt
