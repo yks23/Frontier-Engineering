@@ -1,0 +1,6 @@
+CVRPLib CVRP UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Output explicit routes with depot at both ends.
+3) Every customer must be visited exactly once.
+4) Route demand must not exceed capacity.
+5) Higher combined_score is better.

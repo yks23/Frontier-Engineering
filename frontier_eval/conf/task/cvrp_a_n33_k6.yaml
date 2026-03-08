@@ -1,0 +1,7 @@
+name: unified
+benchmark: Logistics/CapacitatedVehicleRouting_CVRPLib_A_n33_k6
+
+runtime:
+  python_path: ${oc.env:FRONTIER_EVAL_UNIFIED_PYTHON,python3}
+  use_conda_run: false
+  shell: bash
