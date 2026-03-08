@@ -10,6 +10,10 @@
 
 - `proposals/<Domain>/<Task>/report_zh-CN.md`
 
+同时应当先切到当前题独立分支：
+
+- `feat/<Domain>/<Task>`
+
 ## 流程
 
 ### 1. 先确认题目是否值得落地
@@ -74,6 +78,16 @@ baseline 不必强，但必须：
 - 这题做什么
 - 怎么跑
 - 怎么评分
+
+### 6. 分支边界
+
+一个题只在一个分支里完成：
+
+- 当前题的 benchmark 文件
+- 当前题的 `frontier_eval/conf/task/<task_name>.yaml`
+- 当前题自己的文档和元数据
+
+不要把别的题顺手混进同一个分支。
 
 ## 状态转移
 

@@ -15,6 +15,7 @@
 - 本地 evaluator 通过
 - `frontier_eval` 集成通过
 - 测试证据可复现
+- 当前题已在独立分支中开发完成
 
 ## 流程
 
@@ -35,6 +36,19 @@
 - 一个 commit 做一类事
 - 消除测试产物后再提交
 - commit message 直接描述改动
+
+### 2.5 分支要求
+
+每个题只对应一个分支，例如：
+
+```bash
+git checkout -b feat/<Domain>/<Task>
+```
+
+提交 PR 时：
+
+- 当前分支只包含这一个题的改动
+- 一个题只提一个 PR
 
 ### 3. PR 描述最少包含什么
 
@@ -74,11 +88,12 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 
 ### 成功转移
 
-当以下条件满足时，认为当前 PR 任务完成：
+当以下条件满足时，认为当前题的 PR 任务完成：
 
 - 改动已提交并推送
 - PR 所需说明已准备好
 - 工作区干净
+- 已为当前题分支单独发起 PR
 
 此时：
 
@@ -107,6 +122,7 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - PR 不是写“我做了很多”，而是写“维护者怎么快速验证”
 - 证据比描述更重要
 - 对 benchmark 类改动，要说明 baseline、score、validity 和运行方式
+- 每个题一个分支、一个 PR
 - 每完成一个可提交 PR，计数 +1，然后继续下一个题
 
 <!-- AI_GENERATED -->

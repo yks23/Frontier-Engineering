@@ -22,6 +22,8 @@
 - 只有当 `current_pr_count >= target_pr_count` 时，主流程才停止
 - 进入 `Search` 后，**优先处理 `proposals/` 中已有待落地 proposal**
 - 只有当没有待处理 proposal 时，才执行新的网页搜题
+- **每个题单独使用一个分支**
+- **每完成一个题，就单独提一次 PR**
 
 状态机可写成：
 
@@ -109,6 +111,16 @@
 如果要注册 task 别名，再补：
 
 - `frontier_eval/conf/task/<task_name>.yaml`
+
+### 分支要求
+
+进入 `Transformation` 后，先为当前题创建独立分支：
+
+```bash
+git checkout -b feat/<Domain>/<Task>
+```
+
+一个题对应一个分支，不要把多个题混在同一个分支里。
 
 ### 完成标志
 
@@ -242,10 +254,11 @@ git push
 
 > 当 `current_pr_count < 10` 时，先按 `SKILLs/Search.md` 找题并写 proposal；  
 > 若 `proposals/` 中已有待处理 proposal，则优先直接进入 `Transformation`；  
+> 每进入一个题的 `Transformation`，先切到该题自己的分支；  
 > 再按 `SKILLs/Transformation.md` 落成 benchmark；  
 > 再按 `SKILLs/Verification.md` 跑本地与框架测试；  
 > 若验证失败则回退，若连续 5 次失败则删题回到 Search；  
-> 若验证成功，再按 `SKILLs/PullRequest.md` 清理、提交、推送；  
+> 若验证成功，再按 `SKILLs/PullRequest.md` 清理、提交、推送，并为该分支单独提一个 PR；  
 > PR 成功后 `current_pr_count += 1`，若未达 10 则继续下一轮。
 
 <!-- AI_GENERATED -->
