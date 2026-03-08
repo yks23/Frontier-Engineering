@@ -24,6 +24,7 @@
 - 工程场景真实，有现实价值
 - 输入 / 输出能定义清楚
 - 能写出稳定 evaluator
+- 已经有可核实的人类最优解 / best-known 参考
 
 如果这四点不清楚，先不要进实现。
 
@@ -37,8 +38,23 @@
 - validity 规则
 - score 定义
 - 依赖与运行预算
+- human best / best-known 如何映射到 `combined_score`
 
 目标是把“描述”变成“可执行接口”。
+
+### 2.5 1:1 复刻要求
+
+Transformation 阶段要尽量做到：
+
+- **1:1 复刻真实问题的核心结构**
+- 不要把真实工程问题过度降维成无关的抽象玩具题
+
+可以做轻量化，但必须保留真实问题的关键组成：
+
+- 真实输入结构
+- 真实约束类型
+- 真实目标函数方向
+- 真实输出契约
 
 ### 3. 先做最小可运行版本
 
@@ -73,6 +89,12 @@ baseline 不必强，但必须：
 - `README.md / README_zh-CN.md`
 - `Task.md / Task_zh-CN.md`
 
+并明确记录：
+
+- human best / best-known
+- 来源链接
+- 是否已写入统一元数据（如 `human_best_score.txt`）
+
 要让维护者能快速看懂：
 
 - 这题做什么
@@ -99,6 +121,8 @@ baseline 不必强，但必须：
 - evaluator 可调用
 - unified 元数据已补齐（若适用）
 - README / Task 文档可供检查
+- 已记录 human best / best-known
+- 已尽量 1:1 保留真实问题核心结构
 
 目标路径通常是：
 
@@ -112,6 +136,8 @@ baseline 不必强，但必须：
 - 输入输出无法定义
 - evaluator 难以稳定实现
 - baseline 无法做成最小可运行版本
+- 为了省事把问题改得与真实场景脱节
+- 无法在任务中明确记录 human best / best-known
 
 则删除半成品代码并回到 `Search`：
 
@@ -130,6 +156,7 @@ baseline 不必强，但必须：
 - validity 必须比 score 更硬
 - 尽量优先接入 unified，减少专门 task 代码
 - proposal 里的“人类最佳 / best-known”最好同步补成元数据
+- Transformation 的目标不是“做个像的”，而是尽量 1:1 复刻真实问题
 - 做不出最小闭环时，不要硬撑，直接回 Search
 
 <!-- AI_GENERATED -->

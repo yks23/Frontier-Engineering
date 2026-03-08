@@ -55,6 +55,22 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - `combined_score` 正常产生
 - artifacts / history 正常落盘
 
+### 3.5 跑 Qwen3-Coder 10 轮演化
+
+除了 baseline 集成通过，还必须额外验证：
+
+```bash
+python -m frontier_eval task=<task_name> algorithm.iterations=10
+```
+
+并要求使用：
+
+- Qwen3-Coder（如 `qwen/qwen3-coder-next`）
+
+验证目标不是只看“能不能跑”，而是要看：
+
+- 10 轮后的 best score 是否 **严格大于** baseline score
+
 ### 4. 检查评分是否稳定
 
 重点看：
@@ -82,6 +98,7 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - `frontier_eval` 集成通过
 - `valid = 1`
 - `combined_score` 正常产生
+- 在 Qwen3-Coder 10 轮下，best score 相比 baseline 有 **> 0** 的提升
 
 ### 失败转移
 
@@ -90,6 +107,12 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 1. 记录失败原因
 2. 回到 `Transformation`
 3. 修正实现后再次回到 `Verification`
+
+这里的“失败”包括：
+
+- baseline 本身不合法
+- `frontier_eval` 跑不通
+- Qwen3-Coder 10 轮后**没有取得 >0 提升**
 
 ### 最大尝试次数
 
@@ -114,6 +137,7 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - 本地 evaluator 和主框架都必须跑通
 - 测试产物不要提交进仓库
 - 如果支持 `human_best_score`，确认其已进入 metrics/artifacts
+- Verification 不止检查“能跑”，还检查 Qwen3-Coder 10 轮下能否真正改进
 - 5 次失败后不要继续堆补丁，直接删题回到 Search
 
 <!-- AI_GENERATED -->

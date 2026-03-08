@@ -64,6 +64,7 @@
 - 工程场景
 - 输入 / 输出
 - 评分方式
+- human best / best-known
 - 风险
 
 如果这些不清楚，不进入 Step 2。
@@ -126,6 +127,12 @@ git checkout -b feat/<Domain>/<Task>
 
 任务目录结构完整，baseline 自包含，可被 evaluator 调用。
 
+同时必须：
+
+- 尽量 1:1 复刻真实问题核心结构
+- 已记录 human best / best-known
+- 已把 human best 映射到任务分数空间
+
 ### 状态转移
 
 - 最小骨架完成：`Transformation -> Verification`
@@ -170,6 +177,10 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - baseline 被主框架成功加载
 
 如果有 `human_best_score`，也要确认它进入了 metrics / artifacts。
+
+另外还必须满足：
+
+- 在 Qwen3-Coder 10 轮下，best score 相比 baseline 有 **> 0** 提升
 
 ### 状态转移
 
@@ -256,8 +267,8 @@ git push
 > 若 `proposals/` 中已有待处理 proposal，则优先直接进入 `Transformation`；  
 > 每进入一个题的 `Transformation`，先切到该题自己的分支；  
 > 再按 `SKILLs/Transformation.md` 落成 benchmark；  
-> 再按 `SKILLs/Verification.md` 跑本地与框架测试；  
-> 若验证失败则回退，若连续 5 次失败则删题回到 Search；  
+> 再按 `SKILLs/Verification.md` 跑本地测试、主框架测试，以及 Qwen3-Coder 10 轮演化测试；  
+> 若 Qwen3-Coder 10 轮下没有取得 >0 提升，则回到 Transformation；若连续 5 次失败则删题回到 Search；  
 > 若验证成功，再按 `SKILLs/PullRequest.md` 清理、提交、推送，并为该分支单独提一个 PR；  
 > PR 成功后 `current_pr_count += 1`，若未达 10 则继续下一轮。
 

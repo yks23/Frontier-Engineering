@@ -98,12 +98,16 @@ git checkout -b feat/<Domain>/<Task>
 ```bash
 python verification/evaluator.py scripts/init.py
 python -m frontier_eval task=<task_name> algorithm.iterations=0
+python -m frontier_eval task=<task_name> algorithm.iterations=10
 ```
 
 并说明：
 
 - 是否通过
 - 关键输出是什么
+- baseline score 是多少
+- Qwen3-Coder 10 轮后的 best score 是多少
+- 提升是否 **> 0**
 
 ### 5. reviewer 最关心什么
 
@@ -154,6 +158,7 @@ python -m frontier_eval task=<task_name> algorithm.iterations=0
 - PR 不是写“我做了很多”，而是写“维护者怎么快速验证”
 - 证据比描述更重要
 - 对 benchmark 类改动，要说明 baseline、score、validity 和运行方式
+- 还要说明 human best / best-known，以及 Qwen3-Coder 10 轮提升证据
 - 每个题一个分支、一个 PR
 - 每完成一个可提交 PR，计数 +1，然后继续下一个题
 - 如果任务要求“创建 GitHub PR 对象”，没有 token 或可写 PR 工具时必须向用户索取
