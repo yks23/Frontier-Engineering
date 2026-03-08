@@ -1,0 +1,21 @@
+{
+  "material": "IN625",
+  "bounds": {
+    "laser_power": [
+      180.0,
+      280.0
+    ],
+    "scan_speed": [
+      500.0,
+      1100.0
+    ],
+    "hatch_spacing": [
+      0.08,
+      0.16
+    ],
+    "layer_thickness": [
+      0.02,
+      0.06
+    ]
+  }
+}
