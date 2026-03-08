@@ -24,6 +24,6 @@
 
 `combined_score = -(energy_cost + comfort_penalty + peak_penalty)`
 
-越大越好，非法输出记 0 分。
+越大越好，非法输出会被赋予一个极低的哨兵分数。
 
 <!-- AI_GENERATED -->

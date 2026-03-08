@@ -24,6 +24,6 @@ The evaluator simulates indoor temperature.
 
 `combined_score = -(energy_cost + comfort_penalty + peak_penalty)`
 
-Higher is better. Invalid output receives score 0.
+Higher is better. Invalid output receives a very low sentinel score.
 
 <!-- AI_GENERATED -->
