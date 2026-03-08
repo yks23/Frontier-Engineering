@@ -22,19 +22,19 @@
 
 ## 当前候选题
 
-| 领域 | 候选任务 | 题源 |
-|---|---|---|
-| PowerSystems | ACOptimalPowerFlow_PGLibOPF | PGLib-OPF |
-| BuildingEnergy | HVACControl_BOPTEST | BOPTEST |
-| Manufacturing | JobShopScheduling_JSPLib | JSPLib / OR-Library |
-| Transportation | TrafficSignalControl_RESCO | RESCO |
-| WaterSystems | LeakDetection_BattLeDIM | BattLeDIM |
-| RenewableEnergy | WindFarmLayoutOptimization | Wind Farm Layout Optimization Competition |
-| ChemicalEngineering | ProcessControl_TennesseeEastman | Tennessee Eastman Challenge |
-| MaterialsEngineering | MaterialsDiscovery_MatBench | MatBench |
-| AdditiveManufacturing | AMProcessOptimization_AMBench | NIST AM-Bench |
-| SatelliteOperations | EarthObservationScheduling_GECCO2025 | GECCO 2025 EOSS Competition |
-| WarehouseAutomation | MultiAgentPathFinding_MAPF | Moving AI MAPF Benchmarks |
+当前待处理 proposal：
+
+| 领域 | 候选任务 | 题源 | human best / best-known |
+|---|---|---|---|
+| Logistics | CapacitatedVehicleRouting_CVRPLibXML | CVRPLib XML set | 官方已知最优解（XML set 全部实例有最优解） |
+
+后续新候选题需要按新的 Search 标准补齐：
+
+- 真实工程场景
+- 清晰输入 / 输出
+- 稳定 evaluator 方案
+- 可核实的人类最优解 / best-known 参考
+- 该参考如何映射到 `combined_score`
 
 ## 说明
 
