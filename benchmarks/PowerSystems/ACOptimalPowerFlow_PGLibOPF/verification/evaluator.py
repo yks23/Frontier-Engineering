@@ -44,7 +44,7 @@ def validate(instance: dict, solution: dict) -> dict:
         residuals[j] += flow
     max_res = 0.0
     for i in range(len(residuals)):
-        max_res = max(max_res, abs(residuals[i] - injections[i]))
+        max_res = max(max_res, abs(residuals[i] + injections[i]))
     if max_res > float(instance['tolerance']) + 1e-6:
         raise ValueError(f'power balance residual too high: {max_res}')
     score = 1.0 / (1.0 + cost)

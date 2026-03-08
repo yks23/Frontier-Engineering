@@ -14,7 +14,7 @@ def solve(instance: dict) -> dict:
     # Precomputed feasible dispatch/angle pair for this starter DC-like case.
     g0 = 0.775
     g1 = 0.925
-    theta = [0.0, 0.06436170212765958, 0.15106382978723407]
+    theta = [0.0, -0.06436170212765958, -0.15106382978723407]
     return {
         'benchmark_id': instance['benchmark_id'],
         'generator_p': [g0, g1],
