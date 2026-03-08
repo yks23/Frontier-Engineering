@@ -367,17 +367,5 @@
       50,
       50
     ]
-  },
-  "events": [
-    {
-      "start": 30,
-      "end": 59,
-      "zone_id": "zone_1"
-    },
-    {
-      "start": 70,
-      "end": 94,
-      "zone_id": "zone_3"
-    }
-  ]
+  }
 }
