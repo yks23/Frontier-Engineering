@@ -1,0 +1,4 @@
+PSPLIB RCPSP UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Output a full priority permutation of jobs.
+3) Higher combined_score is better.
