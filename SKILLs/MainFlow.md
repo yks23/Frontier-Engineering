@@ -26,6 +26,7 @@
 - **每完成一个题，就单独提一次 PR**
 - **同一 benchmark family 只按 1 类计数**
 - **同一类型最多 3 道，优先补足未覆盖类型**
+- **默认不要扩展已有 family，优先找新的 family**
 
 状态机可写成：
 
@@ -73,6 +74,7 @@
 
 - 当前 family 不应只是已有 family 的机械重复
 - 当前类型若已达到 3 道，则不应继续扩这个类型
+- 若没有用户明确要求，优先选择全新的 family，而不是已有 family 的新实例
 
 如果这些不清楚，不进入 Step 2。
 
@@ -272,7 +274,7 @@ git push
 
 > 当 `current_pr_count < 10` 时，先按 `SKILLs/Search.md` 找题并写 proposal；  
 > 若 `proposals/` 中已有待处理 proposal，则优先直接进入 `Transformation`；  
-> Search 时必须检查多样性：同一 family 只算一类，同一类型最多 3 道；  
+> Search 时必须检查多样性：同一 family 只算一类、同一类型最多 3 道，并且默认优先找新的 family；  
 > 每进入一个题的 `Transformation`，先切到该题自己的分支；  
 > 再按 `SKILLs/Transformation.md` 落成 benchmark；  
 > 再按 `SKILLs/Verification.md` 跑本地测试、主框架测试，以及 Qwen3-Coder 10 轮演化测试；  
