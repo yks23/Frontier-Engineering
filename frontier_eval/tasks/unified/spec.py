@@ -174,6 +174,8 @@ class UnifiedTaskSpec:
     artifact_files: tuple[str, ...]
     constraints_text: str | None
     constraints_path: Path | None
+    human_best_score: float | None
+    human_best_score_path: Path | None
     metrics_json_rel: str | None
     artifacts_json_rel: str | None
     parse_stdout_json: bool
@@ -334,6 +336,24 @@ def load_unified_task_spec(*, task_cfg: Any, repo_root: Path) -> UnifiedTaskSpec
             constraints_text = text.strip() or None
             constraints_path = path
 
+    human_best_score_raw = cfg.get("human_best_score", None)
+    human_best_score: float | None = None
+    human_best_score_path: Path | None = None
+    if human_best_score_raw is not None and str(human_best_score_raw).strip() != "":
+        human_best_score = float(human_best_score_raw)
+    else:
+        human_best_score_file = str(cfg.get("human_best_score_file") or "human_best_score.txt").strip()
+        if human_best_score_file:
+            path = _resolve_metadata_path(
+                benchmark_dir=benchmark_dir,
+                metadata_dir=metadata_dir,
+                file_name=human_best_score_file,
+            )
+            raw_text = _read_scalar_file(path)
+            if raw_text is not None and str(raw_text).strip() != "":
+                human_best_score = float(raw_text)
+                human_best_score_path = path
+
     metrics_json_raw = cfg.get("metrics_json", "metrics.json")
     if metrics_json_raw is None or str(metrics_json_raw).strip() == "":
         metrics_json_rel = None
@@ -395,6 +415,8 @@ def load_unified_task_spec(*, task_cfg: Any, repo_root: Path) -> UnifiedTaskSpec
         artifact_files=artifact_files,
         constraints_text=constraints_text,
         constraints_path=constraints_path,
+        human_best_score=human_best_score,
+        human_best_score_path=human_best_score_path,
         metrics_json_rel=metrics_json_rel,
         artifacts_json_rel=artifacts_json_rel,
         parse_stdout_json=parse_stdout_json,

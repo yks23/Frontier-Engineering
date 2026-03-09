@@ -151,6 +151,7 @@ copy_files.txt           # optional: files/dirs copied into temp sandbox
 readonly_files.txt       # optional: files/dirs that must stay unchanged
 artifact_files.txt       # optional: files/dirs auto-collected by framework
 constraints.txt          # optional: prompt/constraints text for agent
+human_best_score.txt     # optional: human / best-known reference score on combined_score scale
 ```
 
 Line-based `*.txt` files (`initial_program.txt`, `candidate_destination.txt`, `eval_cwd.txt`, `agent_files.txt`, `copy_files.txt`, `readonly_files.txt`, `artifact_files.txt`) support:
@@ -171,6 +172,7 @@ Line-based `*.txt` files (`initial_program.txt`, `candidate_destination.txt`, `e
 - `readonly_files.txt`: files/dirs fingerprinted before/after eval. Any change marks run invalid.
 - `artifact_files.txt`: files/dirs collected by unified framework after eval (for example logs/output files). This avoids writing custom artifacts-export code.
 - `constraints.txt`: free-form instruction text attached to artifacts (agent prompt context).
+- `human_best_score.txt`: optional reference score. When present, Unified exposes it in metrics/artifacts so runs can be compared against a human or best-known result.
 
 #### Placeholder reference
 

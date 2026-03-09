@@ -1,0 +1,6 @@
+HVACControl_BOPTEST UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <instance.json> --output <control_schedule.json>`.
+3) Schedule length must equal horizon.
+4) Power values must stay inside the declared bounds.
+5) Higher combined_score is better.

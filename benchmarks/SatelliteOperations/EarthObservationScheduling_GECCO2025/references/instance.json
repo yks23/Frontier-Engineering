@@ -1,0 +1,70 @@
+{
+  "horizon": 360,
+  "opportunities": [
+    {
+      "obs_id": "obs_01",
+      "earliest": 10,
+      "latest": 40,
+      "duration": 12,
+      "reward": 18,
+      "angle": 5
+    },
+    {
+      "obs_id": "obs_02",
+      "earliest": 30,
+      "latest": 80,
+      "duration": 10,
+      "reward": 15,
+      "angle": 25
+    },
+    {
+      "obs_id": "obs_03",
+      "earliest": 70,
+      "latest": 120,
+      "duration": 14,
+      "reward": 22,
+      "angle": 55
+    },
+    {
+      "obs_id": "obs_04",
+      "earliest": 90,
+      "latest": 150,
+      "duration": 11,
+      "reward": 19,
+      "angle": 35
+    },
+    {
+      "obs_id": "obs_05",
+      "earliest": 140,
+      "latest": 200,
+      "duration": 13,
+      "reward": 24,
+      "angle": 70
+    },
+    {
+      "obs_id": "obs_06",
+      "earliest": 180,
+      "latest": 240,
+      "duration": 12,
+      "reward": 20,
+      "angle": 20
+    },
+    {
+      "obs_id": "obs_07",
+      "earliest": 210,
+      "latest": 290,
+      "duration": 15,
+      "reward": 27,
+      "angle": 60
+    },
+    {
+      "obs_id": "obs_08",
+      "earliest": 260,
+      "latest": 340,
+      "duration": 10,
+      "reward": 16,
+      "angle": 15
+    }
+  ],
+  "slew_scale": 0.5
+}

@@ -1,0 +1,4 @@
+# Reference score converted from best-known makespans for:
+# ta01=1231, ta02=1244, ta11=1357
+# using the benchmark's score definition: mean(lower_bound / makespan)
+0.7967499751439758
