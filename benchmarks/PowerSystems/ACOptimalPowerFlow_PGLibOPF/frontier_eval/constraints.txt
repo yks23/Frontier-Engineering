@@ -1,0 +1,6 @@
+ACOptimalPowerFlow_PGLibOPF UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <instance.json> --output <solution.json>`.
+3) Generator bounds, line limits, and power balance must be satisfied.
+4) Slack bus angle must stay at zero.
+5) Higher combined_score is better.
