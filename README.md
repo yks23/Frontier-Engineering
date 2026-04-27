@@ -112,14 +112,14 @@ Detailed leaderboard: [lab.einsia.ai/frontier-eng/leaderboard.html](https://lab.
 
 | Rank | Model | Average Rank |
 | :--: | :--- | --: |
-| 1 | Claude Opus 4.6 | 3.18 |
-| 2 | GLM-5 | 4.02 |
-| 3 | DeepSeek V3.2 | 4.41 |
-| 4 | Gemini 3.1 Pro Preview | 5.34 |
-| 5 | Grok 4.20 | 5.60 |
-| 6 | SEED 2.0 Pro | 5.63 |
-| 7 | GPT-5.4 | 5.68 |
-| 8 | Qwen3 Coder Next | 6.68 |
+| 1 | GPT-5.4 | 3.54 |
+| 2 | Claude Opus 4.6 | 3.63 |
+| 3 | GLM-5 | 4.34 |
+| 4 | DeepSeek V3.2 | 4.76 |
+| 5 | Gemini 3.1 Pro Preview | 5.53 |
+| 6 | Grok 4.20 | 5.82 |
+| 7 | SEED 2.0 Pro | 5.86 |
+| 8 | Qwen3 Coder Next | 6.71 |
 
 ## Contributing
 
