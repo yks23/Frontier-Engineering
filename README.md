@@ -4,7 +4,7 @@ English | [简体中文](README_zh-CN.md)
 
 [![Homepage](https://img.shields.io/badge/Homepage-lab.einsia.ai-0969DA?style=flat-square&logo=homepage&logoColor=white)](https://lab.einsia.ai/frontier-eng/)
 [![arXiv](https://img.shields.io/badge/arXiv-2604.12290-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](http://arxiv.org/abs/2604.12290)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/hxeVhZNN)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/kBU7yjBds)
 
 Frontier-Eng is a benchmark for **generative optimization**: agents iteratively edit runnable engineering code, get feedback from frozen verifiers, and improve under a fixed interaction budget. The paper's central claim is simple: engineering performance is usually about the **best design you can discover within budget**, not average pass rate. Frontier-Eng therefore focuses on:
 
