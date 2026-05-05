@@ -191,13 +191,9 @@ python scripts/bootstrap/fetch_task_assets.py --target shinkaevolve
 python scripts/bootstrap/fetch_task_assets.py --target abmcts
 ```
 
-Examples:
+Pinned third-party `git` sources for the bootstrap step above are recorded in `scripts/bootstrap/assets_manifest.json` (public upstreams, not part of the anonymous paper identity).
 
-```bash
-mkdir -p third_party
-git clone https://github.com/SakanaAI/treequest.git third_party/treequest
-git clone https://github.com/thuml/PhySense.git third_party/PhySense
-```
+For the separate PhySense checkout used by some aerodynamics tasks, use `bash scripts/vendor_physense.sh` from the repository root.
 
 For `shinkaevolve`, use a local checkout if you need to patch provider metadata or debug the adapter.
 

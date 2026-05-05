@@ -189,11 +189,9 @@ python scripts/bootstrap/fetch_task_assets.py --target shinkaevolve
 python scripts/bootstrap/fetch_task_assets.py --target abmcts
 ```
 
-```bash
-mkdir -p third_party
-git clone https://github.com/SakanaAI/treequest.git third_party/treequest
-git clone https://github.com/thuml/PhySense.git third_party/PhySense
-```
+上述 bootstrap 使用的第三方 `git` 源固定在 `scripts/bootstrap/assets_manifest.json`（公开上游依赖，与匿名审稿身份无关）。
+
+部分空气动力学任务还需要单独的 PhySense checkout：在仓库根目录运行 `bash scripts/vendor_physense.sh`。
 
 如果你要跑 `shinkaevolve` 并修改 provider 信息或做本地调试，建议使用本地 checkout。
 

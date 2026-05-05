@@ -1,6 +1,6 @@
 # EngDesign
 
-The tasks in this directory are all from [EngDesign](https://github.com/AGI4Engineering/EngDesign/tree/main). We have selected tasks from this project that are relatively complex and close to engineering practice.
+The tasks in this directory are adapted from the EngDesign multidisciplinary engineering-design benchmark family. We selected relatively complex tasks that are close to engineering practice.
 
 ```
 `CY_03`

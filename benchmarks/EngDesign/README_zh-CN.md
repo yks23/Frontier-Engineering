@@ -1,6 +1,6 @@
 # EngDesign
 
-该目录下的任务均来自于 [EngDesign](https://github.com/AGI4Engineering/EngDesign/tree/main) 筛选了该项目中的相对复杂度较高，接近工程实践的任务
+该目录下的任务改编自 EngDesign 多学科工程设计基准系列，筛选其中相对复杂度较高、接近工程实践的任务。
 ```
 `CY_03`
 `WJ_01`

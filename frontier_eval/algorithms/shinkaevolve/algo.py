@@ -189,11 +189,9 @@ class ShinkaEvolveAlgorithm(Algorithm):
                 "ShinkaEvolve is not importable.\n"
                 "Bootstrap the local checkout and editable install with:\n"
                 "  python scripts/bootstrap/fetch_task_assets.py --target shinkaevolve\n"
-                "Install it from the official repo (the PyPI package `shinka` is NOT ShinkaEvolve).\n"
-                "Recommended (editable VCS install):\n"
-                "  pip install -e 'git+https://github.com/SakanaAI/ShinkaEvolve.git#egg=shinka'\n"
+                "The PyPI package `shinka` is NOT ShinkaEvolve; use the manifest-driven checkout above.\n"
                 "If you installed via `pip install git+...` and see `ModuleNotFoundError: shinka.core`,\n"
-                "reinstall with the editable command above.\n"
+                "re-run the bootstrap command and ensure `third_party/ShinkaEvolve` is on your PYTHONPATH.\n"
             ) from e
 
         self._se_EvolutionConfig = EvolutionConfig

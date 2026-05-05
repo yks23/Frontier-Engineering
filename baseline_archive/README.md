@@ -2,7 +2,7 @@
 
 English | [简体中文](#简体中文)
 
-`baseline_archive/` is a root-level snapshot of the final global best code produced by our agent runs for each available experiment / algorithm / model / task combination. It serves as a reference baseline for the community.
+`baseline_archive/` is a root-level snapshot of the final global best code produced by recorded agent runs for each available experiment / algorithm / model / task combination. It serves as a reference baseline for the community.
 
 ## Layout
 
@@ -27,7 +27,7 @@ baseline_archive/
 
 ## 简体中文
 
-`baseline_archive/` 位于仓库根目录，收录我们 agent 实验在各实验 / 算法 / 模型 / task 组合上产出的最终全局 best 代码，可作为社区参考 baseline。
+`baseline_archive/` 位于仓库根目录，收录已记录 agent 实验在各实验 / 算法 / 模型 / task 组合上产出的最终全局 best 代码，可作为社区参考 baseline。
 
 ### 目录结构
 

@@ -23,7 +23,7 @@ GDRIVE_ENTRY_RE = re.compile(
     re.S,
 )
 GDRIVE_ID_PATH_RE = re.compile(r"/(?:folders|d)/([A-Za-z0-9_-]+)")
-HTTP_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) Frontier-Eng asset bootstrap"
+HTTP_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) anonymous-benchmark-asset-bootstrap/1.0"
 
 
 def parse_args() -> argparse.Namespace:
