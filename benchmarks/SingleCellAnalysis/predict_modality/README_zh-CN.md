@@ -3,7 +3,7 @@
 该任务基于 OpenProblems Bio 的真实公开数据与评测规范构建：
 
 - Task 仓库：`openproblems-bio/task_predict_modality`
-- Benchmark 页面：https://openproblems.bio/benchmarks/predict_modality
+- Benchmark 页面：
 
 任务目标是在给定输入模态（本 benchmark 选择 **RNA**）的情况下，预测目标模态（本 benchmark 选择 **ADT/蛋白**）。
 数据来自公开的 OpenProblems `openproblems-data`（S3）。

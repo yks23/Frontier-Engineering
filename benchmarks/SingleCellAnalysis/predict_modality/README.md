@@ -3,7 +3,7 @@
 This benchmark is adapted from OpenProblems Bio:
 
 - Task repo: `openproblems-bio/task_predict_modality`
-- Benchmark page: https://openproblems.bio/benchmarks/predict_modality
+- Benchmark page:
 
 It evaluates predicting a target modality (here: **ADT / protein**) from an input modality (here: **RNA**), using the
 public OpenProblems dataset hosted on `openproblems-data` (S3).

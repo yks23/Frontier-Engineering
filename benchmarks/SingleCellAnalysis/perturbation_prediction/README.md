@@ -3,8 +3,8 @@
 This benchmark is adapted from OpenProblems Bio:
 
 - Task repo: `openproblems-bio/task_perturbation_prediction`
-- Benchmark page: https://openproblems.bio/benchmarks/perturbation_prediction
-- NeurIPS 2023 / Kaggle competition: https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
+- Benchmark page:
+- NeurIPS 2023 / Kaggle competition:
 
 It uses the public OpenProblems dataset hosted on `openproblems-data` (S3) and reproduces the core evaluation metrics.
 

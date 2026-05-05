@@ -6,10 +6,10 @@ Instead of invoking the original MATLAB/Simulink runtime directly, this task pro
 
 ## Sources
 
-- Original repository: <https://github.com/micros-uav/CoFlyers>
-- Original global configuration: <https://github.com/micros-uav/CoFlyers/blob/main/matlab_simulink_ws/Prototype_Simulator/xml_config_files/parameters.xml>
-- Original swarm control entry: <https://github.com/micros-uav/CoFlyers/blob/main/matlab_simulink_ws/Prototype_Simulator/lower_layers/swarm_module/Vasarhelyi_module/Vasarhelyi_module_generate_desire_i.m>
-- Original evaluation entry: <https://github.com/micros-uav/CoFlyers/blob/main/matlab_simulink_ws/Prototype_Simulator/lower_layers/evaluation_module/evaluation_0_module/evaluation_0_module_one.m>
+- Original repository:
+- Original global configuration:
+- Original swarm control entry:
+- Original evaluation entry:
 - Original case parameter files: `Vasarhelyi_module/params_for_parallel/Vasarhelyi_module_parameters_{1..8}.m`
 
 ## Layout

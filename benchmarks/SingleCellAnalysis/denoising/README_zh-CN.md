@@ -1,13 +1,13 @@
 # 去噪
 去除稀疏单细胞RNA测序计数数据中的噪声
 
-此任务源自 https://openproblems.bio/benchmarks/denoising?version=v1.0.0
+此任务源自
 
 ## 运行方式
 ```
 cd benchmarks/SingleCellAnalysis/denoising
 
-git clone https://github.com/openproblems-bio/task_denoising.git
+git clone <repository-url>
 cd task_denoising
 git submodule update --init --recursive # 初始化 common
 

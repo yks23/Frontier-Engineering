@@ -215,7 +215,7 @@ We welcome new engineering problem ideas — even without complete verification 
     <tr>
       <td><b>EngDesign</b></td>
       <td><code>CY_03, WJ_01, XY_05, AM_02, AM_03, YJ_02, YJ_03</code></td>
-      <td>Multi-discipline tasks from <a href="https://github.com/AGI4Engineering/EngDesign">EngDesign</a>: drivers, denoising, CPU logic, path planning</td>
+      <td>Multi-discipline tasks from EngDesign: drivers, denoising, CPU logic, path planning</td>
     </tr>
     <tr>
       <td rowspan="5"><b>InventoryOptimization</b></td>

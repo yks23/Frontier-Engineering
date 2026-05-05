@@ -58,6 +58,6 @@
 得分越高越好；不合法输出得分为 0。
 
 ## 5. 参考
-- OpenProblems 任务仓库：https://github.com/openproblems-bio/task_perturbation_prediction
-- Kaggle 比赛：https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
+- OpenProblems 任务仓库：
+- Kaggle 比赛：
 

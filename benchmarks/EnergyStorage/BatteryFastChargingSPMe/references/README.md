@@ -141,8 +141,8 @@ This benchmark is appropriate for:
 
 ## References
 
-- [Moura et al. (2017): Battery State Estimation for a Single Particle Model with Electrolyte Dynamics](https://ieeexplore.ieee.org/document/8017015)
-- [Bizeray et al. (2016): Reduced-order models of lithium-ion batteries for control applications](https://www.sciencedirect.com/science/article/pii/S0378775316310078)
-- [Perez et al. (2017): Optimal charging of Li-ion batteries with coupled electro-thermal-aging dynamics](https://www.sciencedirect.com/)
-- [Nature Energy (2019): Challenges and opportunities towards fast-charging battery materials](https://www.nature.com/articles/s41560-019-0405-3)
-- [Nature Communications (2023): Extreme fast charging of commercial Li-ion batteries via combined thermal switching and self-heating approaches](https://www.nature.com/articles/s41467-023-38823-9)
+- Moura et al. (2017): Battery State Estimation for a Single Particle Model with Electrolyte Dynamics
+- Bizeray et al. (2016): Reduced-order models of lithium-ion batteries for control applications
+- Perez et al. (2017): Optimal charging of Li-ion batteries with coupled electro-thermal-aging dynamics
+- Nature Energy (2019): Challenges and opportunities towards fast-charging battery materials
+- Nature Communications (2023): Extreme fast charging of commercial Li-ion batteries via combined thermal switching and self-heating approaches

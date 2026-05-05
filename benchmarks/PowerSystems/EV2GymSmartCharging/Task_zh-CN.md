@@ -37,6 +37,5 @@
 
 ## 参考来源
 
-- https://github.com/StavrosOrf/EV2Gym
 
 

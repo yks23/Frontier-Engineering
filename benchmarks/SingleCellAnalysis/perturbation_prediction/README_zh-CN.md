@@ -3,8 +3,8 @@
 该任务基于 OpenProblems Bio 的真实公开数据与评测规范构建：
 
 - Task 仓库：`openproblems-bio/task_perturbation_prediction`
-- Benchmark 页面：https://openproblems.bio/benchmarks/perturbation_prediction
-- NeurIPS 2023 / Kaggle 比赛：https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
+- Benchmark 页面：
+- NeurIPS 2023 / Kaggle 比赛：
 
 数据来自公开的 OpenProblems `openproblems-data`（S3），评测脚本复现了核心指标（row-wise correlation / error）。
 

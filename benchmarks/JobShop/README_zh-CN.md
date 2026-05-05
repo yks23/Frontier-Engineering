@@ -43,7 +43,6 @@
 - reference + evaluate 使用 `job_shop_lib` 的 Python 包与 OR-Tools（`ortools`）。
 - 基准实例数据文件已随仓库提供：`JobShop/data/benchmark_instances.json`。
   该文件来源于 `job_shop_lib` 项目：
-  https://github.com/Pabloo22/job_shop_lib.git
 
 ## `evaluate.py` 参数说明
 

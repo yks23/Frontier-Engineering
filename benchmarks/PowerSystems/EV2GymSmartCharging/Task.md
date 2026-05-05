@@ -36,6 +36,5 @@ All actions must stay within `[-1, 1]`.
 
 ## Reference source
 
-- https://github.com/StavrosOrf/EV2Gym
 
 

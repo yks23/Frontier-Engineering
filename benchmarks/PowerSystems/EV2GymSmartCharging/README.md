@@ -5,7 +5,7 @@ It uses the upstream simulator and upstream data copies from `EV2Gym`, rather th
 
 ## Upstream source
 
-- GitHub: https://github.com/StavrosOrf/EV2Gym
+- GitHub:
 - Upstream config template used here: `references/upstream/V2GProfitPlusLoads.yaml`
 - Upstream data copies used by the evaluator live under `references/upstream/`
 

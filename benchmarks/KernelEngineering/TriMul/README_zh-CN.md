@@ -1,6 +1,6 @@
 # 三角形乘法
 
-此任务源自 https://www.gpumode.com/leaderboard/496?tab=rankings
+此任务源自
 
 TriMul 参考实现位于 `baseline/reference.py` 这里是基础实现，同时也是数值正确性的标准
 `baseline/solution.py` 是 `test-time-training` 所提供的实现

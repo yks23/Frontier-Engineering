@@ -54,6 +54,6 @@
 得分越高越好；不合法输出得分为 0。
 
 ## 5. 参考
-- OpenProblems 任务仓库：https://github.com/openproblems-bio/task_predict_modality
-- OpenProblems Benchmark 页面：https://openproblems.bio/benchmarks/predict_modality
+- OpenProblems 任务仓库：
+- OpenProblems Benchmark 页面：
 

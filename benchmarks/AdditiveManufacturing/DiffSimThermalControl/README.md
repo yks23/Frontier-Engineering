@@ -11,7 +11,6 @@ The benchmark uses the original committed upstream geometry and toolpath files:
 
 Source repository:
 
-- `https://github.com/mojtabamozaffar/differentiable-simulation-am`
 
 Important note:
 

@@ -55,6 +55,6 @@ We convert correlation and error into a single maximization score:
 Higher is better. Invalid submissions receive score 0.
 
 ## 5. References
-- OpenProblems Bio task repo: https://github.com/openproblems-bio/task_predict_modality
-- OpenProblems benchmarks: https://openproblems.bio/benchmarks/predict_modality
+- OpenProblems Bio task repo:
+- OpenProblems benchmarks:
 
