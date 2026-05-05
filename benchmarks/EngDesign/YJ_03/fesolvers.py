@@ -3,9 +3,6 @@ Finite element solvers for the displacement from stiffness matrix, force and
 adjoint vector. This version of the code is meant for stress intensity
 minimization.
 
-Bram Lagerweij
-Aerospace Structures and Materials Department TU Delft
-2018
 """
 
 # Importing modules for parent class

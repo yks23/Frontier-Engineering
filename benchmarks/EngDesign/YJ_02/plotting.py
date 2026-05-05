@@ -1,9 +1,6 @@
 """
 Plotting the simulated TopOpt geometry with boundery conditions and loads.
 
-Bram Lagerweij
-Aerospace Structures and Materials Department TU Delft
-2018
 """
 
 import matplotlib.pyplot as plt

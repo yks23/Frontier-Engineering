@@ -2,9 +2,6 @@
 Finite element solvers for the displacement from stiffness matrix and force
 vector. This version of the code is meant for global compliance minimization.
 
-Bram Lagerweij
-Aerospace Structures and Materials Department TU Delft
-2018
 """
 
 # Importing modules parent class
