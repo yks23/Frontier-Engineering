@@ -5,7 +5,7 @@
 
 ## 上游来源
 
-- GitHub：https://github.com/StavrosOrf/EV2Gym
+- GitHub：
 - 本任务使用的上游配置模板：`references/upstream/V2GProfitPlusLoads.yaml`
 - evaluator 实际使用的上游数据副本位于 `references/upstream/`
 

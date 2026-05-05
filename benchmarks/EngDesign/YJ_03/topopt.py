@@ -4,9 +4,6 @@ filters and update scheme. It requires to call upon a constraint, load case and
 FE solver classes. This version of the code is meant for stress intensity
 factor minimization.
 
-Bram Lagerweij
-Aerospace Structures and Materials Department TU Delft
-2018
 """
 
 import numpy as np
@@ -437,10 +434,7 @@ class Topopt(object):
 
         Version September 2007 (and a small change August 2008)
 
-        Krister Svanberg <krille@math.kth.se>
-        Department of Mathematics KTH, SE-10044 Stockholm, Sweden.
-
-        Translated to python 3 by A.J.J. Lagerweij TU Delft June 2018
+        Translated to python 3, June 2018
         """
         epsimin = np.sqrt(m + n)*10**(-9)
         raa0 = 0.00001

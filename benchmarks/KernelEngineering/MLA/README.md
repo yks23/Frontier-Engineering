@@ -1,6 +1,6 @@
 # amd-mla-decode
 
-This task originates from https://www.gpumode.com/leaderboard/463?tab=rankings.
+This task originates from
 
 The MLA reference implementation is located in `baseline/reference.py`, which is the basic implementation and also the standard for numerical correctness.
 

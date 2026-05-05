@@ -1,6 +1,6 @@
 # Triangle Multiplication
 
-This task originates from https://www.gpumode.com/leaderboard/496?tab=rankings
+This task originates from
 
 The TriMul reference implementation is located in `baseline/reference.py`. This is the basic implementation and also the standard for numerical correctness.
 

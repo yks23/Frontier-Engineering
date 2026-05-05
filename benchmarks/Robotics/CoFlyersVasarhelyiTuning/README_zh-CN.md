@@ -6,10 +6,10 @@
 
 ## 来源
 
-- 原始仓库：<https://github.com/micros-uav/CoFlyers>
-- 原始全局配置：<https://github.com/micros-uav/CoFlyers/blob/main/matlab_simulink_ws/Prototype_Simulator/xml_config_files/parameters.xml>
-- 原始 swarm 控制入口：<https://github.com/micros-uav/CoFlyers/blob/main/matlab_simulink_ws/Prototype_Simulator/lower_layers/swarm_module/Vasarhelyi_module/Vasarhelyi_module_generate_desire_i.m>
-- 原始评估入口：<https://github.com/micros-uav/CoFlyers/blob/main/matlab_simulink_ws/Prototype_Simulator/lower_layers/evaluation_module/evaluation_0_module/evaluation_0_module_one.m>
+- 原始仓库：
+- 原始全局配置：
+- 原始 swarm 控制入口：
+- 原始评估入口：
 - 原始 case 参数文件：`Vasarhelyi_module/params_for_parallel/Vasarhelyi_module_parameters_{1..8}.m`
 
 ## 文件结构

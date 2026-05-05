@@ -191,8 +191,8 @@ python scripts/bootstrap/fetch_task_assets.py --target abmcts
 
 ```bash
 mkdir -p third_party
-git clone https://github.com/SakanaAI/treequest.git third_party/treequest
-git clone https://github.com/thuml/PhySense.git third_party/PhySense
+git clone <repository-url> third_party/treequest
+git clone <repository-url> third_party/PhySense
 ```
 
 如果你要跑 `shinkaevolve` 并修改 provider 信息或做本地调试，建议使用本地 checkout。

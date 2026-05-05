@@ -15,7 +15,7 @@ This task is designed to evaluate whether an agent can improve end-to-end worklo
 
 This benchmark is grounded in upstream DuckDB benchmark files (no fabricated workload SQL):
 
-- Source repository: `https://github.com/duckdb/duckdb`
+- Source repository:
 - Source commit: `ff4f70eeee83cfd3dae6577fc9b2b448d5fbdb35`
 - Imported files are listed in `references/problem_config.json` and copied under `references/duckdb_official/`.
 

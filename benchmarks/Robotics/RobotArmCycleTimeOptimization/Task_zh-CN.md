@@ -137,4 +137,4 @@ q_goal  = [1.2, -0.3,  0.8, -0.8,  0.5,  0.8,  1.0]
 
 - 机器人参数：`references/robot_config.json`
 - 评测器：`verification/evaluator.py`
-- KUKA LBR iiwa 产品页面：https://www.kuka.com/en-us/products/robotics-systems/industrial-robots/lbr-iiwa
+- KUKA LBR iiwa 产品页面：

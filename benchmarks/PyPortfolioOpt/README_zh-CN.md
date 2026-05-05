@@ -2,7 +2,7 @@
 
 该领域聚焦于贴近实盘的投资组合再平衡与配置优化任务。
 任务设定与求解流程依赖
-[PyPortfolioOpt](https://github.com/PyPortfolio/PyPortfolioOpt) 项目。
+PyPortfolioOpt 项目。
 
 ## 依赖说明
 

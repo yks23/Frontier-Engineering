@@ -19,7 +19,6 @@ Classic benchmark set introduced with shifting bottleneck ideas; frequently used
 - `verification/reference.py` and `verification/evaluate.py`:
   use the `job_shop_lib` Python package and OR-Tools (`ortools`).
   Benchmark instance data is vendored at `JobShop/data/benchmark_instances.json`, sourced from
-  https://github.com/Pabloo22/job_shop_lib.git.
 
 ## Current directory structure
 

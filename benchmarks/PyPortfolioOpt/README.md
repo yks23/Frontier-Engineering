@@ -2,7 +2,7 @@
 
 This benchmark family focuses on practical portfolio rebalancing and allocation optimization.
 It is built on problem settings and solver workflows that depend on
-[PyPortfolioOpt](https://github.com/PyPortfolio/PyPortfolioOpt).
+PyPortfolioOpt.
 
 ## Dependency
 

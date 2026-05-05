@@ -1,6 +1,6 @@
 # Description
 
-For a more complete description, see: https://tinyurl.com/gpumode-trimul You will be implementing a Triangle Multiplicative Update (TriMul) module that is a core operation for AlphaFold3, Chai, Protenix, and other protein structure prediction models in BioML.
+For a more complete description, see:  You will be implementing a Triangle Multiplicative Update (TriMul) module that is a core operation for AlphaFold3, Chai, Protenix, and other protein structure prediction models in BioML.
 
 The TriMul operator operates over a 4D tensor of shape [B, N, N, C].
 
@@ -21,15 +21,15 @@ Output:
 - Tuple containing:
     - output: Processed tensor [bs, seq_len, seq_len, dim]
 
-Here is a more detailed description 
+Here is a more detailed description
 
 ### **Introduction and Motivation**
 
-*“This is a really really fun + impactful problem for kernel devs. good luck :p” — az* 
+*“This is a really really fun + impactful problem for kernel devs. good luck :p” — az*
 
-A lot of the kernels / problems you will see in these GPU MODE kernel writing competitions center around large language model training — our last competition, for example, centered around popular single-device kernels used in DeepSeek-V3/R1. Many future problems may also revolve around communication kernels where we provide a whole node such as the expert parallelism MoE. 
+A lot of the kernels / problems you will see in these GPU MODE kernel writing competitions center around large language model training — our last competition, for example, centered around popular single-device kernels used in DeepSeek-V3/R1. Many future problems may also revolve around communication kernels where we provide a whole node such as the expert parallelism MoE.
 
-Many of these kernels we have in mind have already been heavily optimized by experts in labs like DeepSeek, OpenAI, Anthropic, Google DeepMind, etc. so we wanted to design some problems that were still interesting, but had real use cases when solved. The first problem that immediately came to mind was the **Triangle Multiplicative Update** used in AlphaFold2 and AlphaFold3, a series of extremely influential works in the BioML space that led to [**John Jumper and Demis Hassabis winning the Nobel Prize in Chemistry**](https://www.nobelprize.org/prizes/chemistry/2024/press-release/). This operator is particularly nasty due to its cubic $O(n^3)$ operations. The peak memory of this operator is so bad that most implementations of AlphaFold3 (see [**Ligo’s OSS reproduction](https://github.com/Ligo-Biosciences/AlphaFold3)** and MIT’s [**Boltz-2**](https://github.com/jwohlwend/boltz)) keep the batch size during training at 1, despite the models being <1B in parameter size!
+Many of these kernels we have in mind have already been heavily optimized by experts in labs like DeepSeek, OpenAI, Anthropic, Google DeepMind, etc. so we wanted to design some problems that were still interesting, but had real use cases when solved. The first problem that immediately came to mind was the **Triangle Multiplicative Update** used in AlphaFold2 and AlphaFold3, a series of extremely influential works in the BioML space that led to **John Jumper and Demis Hassabis winning the Nobel Prize in Chemistry**. This operator is particularly nasty due to its cubic $O(n^3)$ operations. The peak memory of this operator is so bad that most implementations of AlphaFold3 (see **Ligo’s OSS reproduction** and MIT’s **Boltz-2**) keep the batch size during training at 1, despite the models being <1B in parameter size!
 
 ***Edit.** Funnily enough, while writing up this problem, we noticed that NVIDIA actually released that they had been working on this kernel in their cuEquivariance library — what a coincidence! We ask that participants do not use this library in their solutions, as it is closed source (we will be automatically and manually removing these solutions on the leaderboard). Honestly though, I’m confident that you all can easily beat their solution!*
 
@@ -55,7 +55,7 @@ Given a tensor $\bold{Z} \in \mathbb{R}^{B \times N \times N \times c_z}$, compu
 **Code Version:**
 
 ```python
-# From https://github.com/lucidrains/triangle-multiplicative-module/blob/main/triangle_multiplicative_module/triangle_multiplicative_module.py
+# From <source>
 class TriMul(nn.Module):
     def __init__(
         self,
@@ -130,14 +130,6 @@ class TriMul(nn.Module):
 
 **Remarks.** So why is this problem so annoying? Because you have to choose whether to load / deal with either the channel dimensions $c,c_z$ that the LayerNorms require (otherwise you have to do a synchronize to compute the statistics like mean / variance) or the sequence dimension $N$. The sequence dimension is particularly annoying because it’s quite large, but also because we compute pair-wise operations at the last operation that sum over another sequence dimension (this is $N^3$!). However, I really like this kernel because it only consists of “simple” operations, and is really easy to understand. It is a true test of “fusions” that torch.compile() doesn’t do that well.
 
-**Some GitHub references of AF3 / TriMul kernels if you’re interested:**
-
-https://github.com/lucidrains/triangle-multiplicative-module
-
-https://github.com/jwohlwend/boltz
-
-https://github.com/chaidiscovery/chai-lab
-
-https://github.com/NVIDIA/cuEquivariance/commit/87a1ddb9fe79469a0562ce1895bdf461efc660f4
+**Some GitHub references of AF3 / TriMul kernels if you’re interested:** *(links removed for anonymous review)*
 
 </aside>

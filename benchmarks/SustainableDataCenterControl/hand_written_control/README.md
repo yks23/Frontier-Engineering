@@ -4,7 +4,7 @@ This subtask asks you to write a deterministic control policy for the three orig
 
 > **[ATTENTION] Must clone the vendored directory before running**:
 > SustainDC relies on the `dc-rl` library. The `sustaindc/` directory is an empty placeholder. Run this before evaluation:
-> `git clone https://github.com/HewlettPackard/dc-rl.git benchmarks/SustainableDataCenterControl/hand_written_control/sustaindc`
+> `git clone <repository-url> benchmarks/SustainableDataCenterControl/hand_written_control/sustaindc`
 
 Or use the repository bootstrap helper:
 
@@ -111,7 +111,7 @@ The patch in this directory is tested against upstream commit `a92b475`.
 ```bash
 cd benchmarks/SustainableDataCenterControl/hand_written_control
 
-git clone https://github.com/HewlettPackard/dc-rl.git sustaindc_fresh
+git clone <repository-url> sustaindc_fresh
 git -C sustaindc_fresh checkout a92b475
 
 .venvs/frontier-v1-sustaindc/bin/python -m pip install -r sustaindc_fresh/requirements.txt

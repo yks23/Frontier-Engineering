@@ -148,12 +148,12 @@ OCV 使用平滑的非线性函数，目的是让：
 
 ## 参考来源
 
-- [Nature Energy (2019): Challenges and opportunities towards fast-charging battery materials](https://www.nature.com/articles/s41560-019-0405-3)
-- [Nature Communications (2023): Extreme fast charging of commercial Li-ion batteries via combined thermal switching and self-heating approaches](https://www.nature.com/articles/s41467-023-38823-9)
-- [Nature Energy (2023): Quantifying lithium plating for fast-charge protocol design](https://www.nature.com/articles/s41560-023-01194-y)
-- [OSTI (2015): Lithium-ion battery cell-level control using constrained model predictive control and equivalent circuit models](https://www.osti.gov/biblio/1211079)
-- [Journal of Energy Storage (2024): A novel hybrid electrochemical equivalent circuit model for online battery management systems](https://www.sciencedirect.com/science/article/pii/S2352152X24027282)
-- [Journal of Energy Storage (2021): Fast charging lithium-ion battery formation based on simulations with an electrode equivalent circuit model](https://www.sciencedirect.com/science/article/abs/pii/S2352152X21001080)
+- Nature Energy (2019): Challenges and opportunities towards fast-charging battery materials
+- Nature Communications (2023): Extreme fast charging of commercial Li-ion batteries via combined thermal switching and self-heating approaches
+- Nature Energy (2023): Quantifying lithium plating for fast-charge protocol design
+- OSTI (2015): Lithium-ion battery cell-level control using constrained model predictive control and equivalent circuit models
+- Journal of Energy Storage (2024): A novel hybrid electrochemical equivalent circuit model for online battery management systems
+- Journal of Energy Storage (2021): Fast charging lithium-ion battery formation based on simulations with an electrode equivalent circuit model
 
 ## 如何理解这个 benchmark
 

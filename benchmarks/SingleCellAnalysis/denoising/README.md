@@ -1,13 +1,13 @@
 # Denoising
 Removing noise from sparse single-cell RNA-sequencing count data
 
-This task originates from https://openproblems.bio/benchmarks/denoising?version=v1.0.0
+This task originates from
 
 ## How to Run
 ```bash
 cd benchmarks/SingleCellAnalysis/denoising
 
-git clone [https://github.com/openproblems-bio/task_denoising.git](https://github.com/openproblems-bio/task_denoising.git)
+git clone <repository-url>
 cd task_denoising
 git submodule update --init --recursive # Initialize common
 
@@ -28,7 +28,7 @@ bash scripts/run_benchmark/run_test_local.sh
 # mse and poisson (see temp/results/testrun_xxx/metric_configs.yaml).
 
 ```
-The evaluation results will be located in `benchmarks/SingleCellAnalysis/denoising/task_denoising/temp/results/xxx/score_uns.yaml`. 
+The evaluation results will be located in `benchmarks/SingleCellAnalysis/denoising/task_denoising/temp/results/xxx/score_uns.yaml`.
 You can extract the scores from it by running `benchmarks/SingleCellAnalysis/denoising/verification/rank_scores.py`.
 
 

@@ -1,7 +1,7 @@
 # 去噪
 去除稀疏单细胞RNA测序计数数据中的噪声
 
-此任务源自 https://openproblems.bio/benchmarks/denoising?version=v1.0.0
+此任务源自
 
 baseline/benchmark_denoising.ipynb 是 test-time-training 仓库中对比基础 MAGIC 算法与 ttt 实现的脚本
 baseline/run_magic/ttt_denoising.py 是经我们拆解后的两种方法的运行文件

@@ -3,9 +3,6 @@ This file containts the Load class that allows the generation of an object that
 contains geometric, mesh, loads and boundary conditions that belong to the
 load case. This version of the code is meant for stress intensity minimization.
 
-Bram Lagerweij
-Aerospace Structures and Materials Department TU Delft
-2018
 """
 
 import numpy as np

@@ -195,8 +195,8 @@ Examples:
 
 ```bash
 mkdir -p third_party
-git clone https://github.com/SakanaAI/treequest.git third_party/treequest
-git clone https://github.com/thuml/PhySense.git third_party/PhySense
+git clone <repository-url> third_party/treequest
+git clone <repository-url> third_party/PhySense
 ```
 
 For `shinkaevolve`, use a local checkout if you need to patch provider metadata or debug the adapter.

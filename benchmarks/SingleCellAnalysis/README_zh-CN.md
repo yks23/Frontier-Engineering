@@ -6,4 +6,4 @@
 - `denoising_ttt`：去除稀疏 scRNA-seq 计数数据中的噪声（来自 test-time-training/discover）
 - `perturbation_prediction`：化学扰动响应（差异表达）预测
 
-参见 https://openproblems.bio/benchmarks
+参见

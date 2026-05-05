@@ -16,8 +16,8 @@ source .venv/bin/activate
 uv pip install -r new_reqs.txt
 
 # Git dependencies
-uv pip install git+https://github.com/czbiohub/simscity.git
-uv pip install --no-deps git+https://github.com/czbiohub/molecular-cross-validation.git
+uv pip install <package>
+uv pip install --no-deps <package>
 uv pip install -e ./openproblems
 
 # Minro API Change (if not already applied)

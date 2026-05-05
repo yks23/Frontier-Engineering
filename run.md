@@ -48,7 +48,7 @@ sudo usermod -aG docker "$USER"
 docker version
 ```
 
-Start a new shell after changing group membership. If you need the full upstream setup instead, follow the official Docker Engine guide: [docs.docker.com/engine/install](https://docs.docker.com/engine/install/).
+Start a new shell after changing group membership. If you need the full upstream setup instead, follow the official Docker Engine guide: docs.docker.com/engine/install.
 
 #### CUDA / NVIDIA stack
 

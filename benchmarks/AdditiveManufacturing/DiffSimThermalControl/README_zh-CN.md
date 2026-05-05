@@ -11,7 +11,6 @@
 
 上游仓库：
 
-- `https://github.com/mojtabamozaffar/differentiable-simulation-am`
 
 需要特别说明的是：
 

@@ -5,7 +5,6 @@
 Conceptual aircraft sizing is a coupled engineering optimization problem. Mission targets (payload, cruise altitude, endurance) interact with aerodynamic, structural, and propulsion decisions. This benchmark captures that coupling with a simplified but constrained model.
 
 This task is inspired by the design optimization flow from:
-- `https://github.com/peterdsharpe/DawnDesignTool`
 - original reference script: `design_opt.py`
 
 ## 2. Task

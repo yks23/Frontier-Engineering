@@ -5,9 +5,6 @@ density in the upcomming iteration and the magnitude of the volume constraint
 function itself of the current design. This version of the code is used for
 stress intensity minimisation.
 
-Bram Lagerweij
-Aerospace Structures and Materials Department TU Delft
-2018
 """
 
 import numpy as np

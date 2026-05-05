@@ -1,6 +1,6 @@
 # Structural Optimization
 
-This domain covers structural engineering optimization problems derived from the **International Student Competition in Structural Optimization (ISCSO)**, organized by [Bright Optimizer](http://www.brightoptimizer.com/).
+This domain covers structural engineering optimization problems derived from the **International Student Competition in Structural Optimization (ISCSO)**, organized by Bright Optimizer.
 
 Structural optimization is a core discipline in civil, aerospace, and mechanical engineering, aiming to find the optimal design of load-bearing structures that minimizes material usage (weight) while satisfying safety constraints (stress and displacement limits).
 

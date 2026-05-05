@@ -48,7 +48,7 @@ sudo usermod -aG docker "$USER"
 docker version
 ```
 
-改完用户组后，重新开一个 shell 再继续。如果你需要更标准的官方安装路径，请参考 Docker 官方文档：[docs.docker.com/engine/install](https://docs.docker.com/engine/install/)。
+改完用户组后，重新开一个 shell 再继续。如果你需要更标准的官方安装路径，请参考 Docker 官方文档：docs.docker.com/engine/install。
 
 #### CUDA / NVIDIA 栈
 

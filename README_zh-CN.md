@@ -2,7 +2,7 @@
 
 [English](README.md) | 简体中文
 
-[主页](https://lab.einsia.ai/frontier-eng/) · [arXiv](http://arxiv.org/abs/2604.12290) · [Discord](https://discord.gg/hxeVhZNN)
+*匿名投稿 — 链接已移除，待审稿结束后恢复。*
 
 Frontier-Eng 是一个面向 **generative optimization** 的 benchmark：Agent 不是一次性写出“标准答案”，而是持续修改可运行的工程代码，读取只读 verifier 的反馈，并在固定预算内不断改进。
 
@@ -110,7 +110,7 @@ bash scripts/batch/validate_v1_task_envs.sh
 
 ## Leaderboard
 
-详细榜单见 [lab.einsia.ai/frontier-eng/leaderboard.html](https://lab.einsia.ai/frontier-eng/leaderboard.html)。
+详细榜单见 *[链接已移除，待审稿结束后恢复]*。
 
 | 排名 | Model | Average Rank |
 | :--: | :--- | --: |

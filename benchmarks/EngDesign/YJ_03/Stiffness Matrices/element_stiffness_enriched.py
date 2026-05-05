@@ -2,8 +2,6 @@
 Created on Tue Jul 10 15:59:56 2018
 This code is meant to calculate the stiffness matrix of a nth order 2D element
 The shape functions and the nodal coordinates need to be setup
-
-@author: bram
 """
 
 import csv

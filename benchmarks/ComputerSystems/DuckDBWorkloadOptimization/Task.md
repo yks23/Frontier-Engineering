@@ -17,7 +17,7 @@ Improving workload runtime without changing business semantics directly reduces 
 
 All workload SQL and data setup are sourced from official DuckDB benchmark files:
 
-- Repo: `https://github.com/duckdb/duckdb`
+- Repo:
 - Commit: `ff4f70eeee83cfd3dae6577fc9b2b448d5fbdb35`
 
 Imported source files include:

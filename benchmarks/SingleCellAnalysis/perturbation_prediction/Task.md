@@ -60,7 +60,7 @@ We convert correlation and error into a single maximization score:
 Higher is better. Invalid submissions receive score 0.
 
 ## 5. References
-- OpenProblems Bio task repo: https://github.com/openproblems-bio/task_perturbation_prediction
-- Kaggle competition: https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
+- OpenProblems Bio task repo:
+- Kaggle competition:
 - Dataset/bench context: NeurIPS 2023 Open Problems competition track.
 

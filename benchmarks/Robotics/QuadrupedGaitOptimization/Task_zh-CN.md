@@ -67,7 +67,7 @@ foot_z(s) = −body_height + step_height × sin(π × s)   # 正弦抬腿
 | RR 相位偏移  | `phase_RR`        | [0.0, 1.0) | —   |
 | 侧向距离     | `lateral_distance`| [0.08, 0.20] | m |
 
-> **注意**：FL 腿为相位基准（φ_FL = 0），三个 `phase_*` 分别对应 FR、RL、RR 腿。  
+> **注意**：FL 腿为相位基准（φ_FL = 0），三个 `phase_*` 分别对应 FR、RL、RR 腿。
 > `lateral_distance` 为足端接触点到机体中心线的横向距离。
 
 ## 5. 约束条件
@@ -186,5 +186,5 @@ score = v_nominal × stability_factor × friction_factor
 
 - `references/gait_config.json` — 全部数值常数
 - Raibert, M. H. (1986). *Legged Robots That Balance*. MIT Press.
-- 宇树 A1 规格：https://www.unitree.com/a1/
+- 宇树 A1 规格：
 - Vukobratović & Borovac (2004). Zero-moment point — thirty five years of its life. *IJHR*.

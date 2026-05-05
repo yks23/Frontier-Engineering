@@ -17,15 +17,15 @@ python scripts/bootstrap/fetch_task_assets.py --target car-aero
 
 0) Ensure the PhySense repo (model code) is available (required for evaluation):
 - Recommended:
-  - `git clone https://github.com/thuml/PhySense.git third_party/PhySense`
+  - `git clone <repository-url> third_party/PhySense`
 - Default: `third_party/PhySense/Car-Aerodynamics/`
 - Alternatives:
   - `<workspace>/PhySense/Car-Aerodynamics/` (next to `Frontier-Engineering/`)
   - set `PHYSENSE_ROOT=/path/to/PhySense` (or to the `Car-Aerodynamics/` folder)
 
 1) Download dataset and pretrained model from PhySense:
-- Dataset: https://drive.google.com/drive/folders/1Xt395uC-RreWQ_bh5v_Bu-AOwV6SRt_w?usp=share_link
-- Pretrained models: https://drive.google.com/drive/folders/1kODTzH5n_njQ7lgL-2i2aXbt33UjGKk9?usp=sharing
+- Dataset:
+- Pretrained models:
 
 2) Place the files in the **fixed paths** below (relative to this task directory):
 - Dataset root: `data/physense_car_data/`

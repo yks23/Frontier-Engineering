@@ -1,6 +1,6 @@
 # EngDesign
 
-The tasks in this directory are all from [EngDesign](https://github.com/AGI4Engineering/EngDesign/tree/main). We have selected tasks from this project that are relatively complex and close to engineering practice.
+The tasks in this directory are all from EngDesign. We have selected tasks from this project that are relatively complex and close to engineering practice.
 
 ```
 `CY_03`
@@ -16,8 +16,8 @@ The tasks in this directory are all from [EngDesign](https://github.com/AGI4Engi
 ## Environment
 ### 1. Install and Log in to Docker
 
-- Register at [hub.docker.com](https://hub.docker.com/) and **verify your email**.
-- Download and install Docker Desktop on your machine: [Download Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Register at hub.docker.com and **verify your email**.
+- Download and install Docker Desktop on your machine: Download Docker Desktop
 - Launch Docker Desktop and log in to your account.
 - Make sure Docker Desktop has access to your drive (check settings).
 

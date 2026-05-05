@@ -4,7 +4,7 @@
 
 > **[注意] 必须完整克隆内部依赖目录才能运行本任务**：
 > SustainDC 依赖前置的 `dc-rl` 库。本仓库的 `sustaindc` 文件夹是放置依赖的占位符。请在运行前执行：
-> `git clone https://github.com/HewlettPackard/dc-rl.git benchmarks/SustainableDataCenterControl/hand_written_control/sustaindc`
+> `git clone <repository-url> benchmarks/SustainableDataCenterControl/hand_written_control/sustaindc`
 
 或者直接使用仓库里的 bootstrap 入口：
 
@@ -111,7 +111,7 @@ python -m frontier_eval \
 ```bash
 cd benchmarks/SustainableDataCenterControl/hand_written_control
 
-git clone https://github.com/HewlettPackard/dc-rl.git sustaindc_fresh
+git clone <repository-url> sustaindc_fresh
 git -C sustaindc_fresh checkout a92b475
 
 .venvs/frontier-v1-sustaindc/bin/python -m pip install -r sustaindc_fresh/requirements.txt

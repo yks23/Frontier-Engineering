@@ -17,7 +17,7 @@
 
 本任务所有 workload SQL 与数据加载流程均来自 DuckDB 官方 benchmark 文件：
 
-- 仓库：`https://github.com/duckdb/duckdb`
+- 仓库：
 - 提交：`ff4f70eeee83cfd3dae6577fc9b2b448d5fbdb35`
 
 引入文件包括：

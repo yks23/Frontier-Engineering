@@ -15,7 +15,7 @@
 
 本任务直接基于 DuckDB 上游 benchmark 文件，不使用捏造的 workload SQL：
 
-- 来源仓库：`https://github.com/duckdb/duckdb`
+- 来源仓库：
 - 来源提交：`ff4f70eeee83cfd3dae6577fc9b2b448d5fbdb35`
 - 引入文件清单见 `references/problem_config.json`，并已复制到 `references/duckdb_official/`。
 

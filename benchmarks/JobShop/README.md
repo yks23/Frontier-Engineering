@@ -43,7 +43,6 @@ This folder organizes 7 classic JSSP benchmark families into a uniform training/
 - Reference + evaluation scripts use the `job_shop_lib` Python package and OR-Tools (`ortools`).
 - Benchmark instance data is vendored in this repository at
   `JobShop/data/benchmark_instances.json`, sourced from:
-  https://github.com/Pabloo22/job_shop_lib.git
 
 ## `evaluate.py` arguments
 
