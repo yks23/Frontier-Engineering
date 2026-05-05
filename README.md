@@ -133,4 +133,3 @@ Contribution guidelines live in [`CONTRIBUTING.md`](CONTRIBUTING.md).
   year={2026}
 }
 ```
-
