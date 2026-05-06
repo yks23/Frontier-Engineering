@@ -134,7 +134,7 @@ The evaluator is deterministic because benchmarking needs:
 - fast local verification,
 - compatibility with evolutionary search and batch evaluation.
 
-A stochastic uncertainty layer can be added later, but for a first benchmark contribution deterministic evaluation is the right tradeoff.
+A stochastic uncertainty layer can be added later, but for an initial deterministic benchmark release this tradeoff is appropriate.
 
 ## Suggested Extension Directions
 
