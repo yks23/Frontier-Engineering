@@ -2,18 +2,13 @@
 
 English | [简体中文](README_zh-CN.md)
 
-[![Homepage](https://img.shields.io/badge/Homepage-lab.einsia.ai-0969DA?style=flat-square&logo=homepage&logoColor=white)](https://lab.einsia.ai/frontier-eng/)
-[![arXiv](https://img.shields.io/badge/arXiv-2604.12290-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](http://arxiv.org/abs/2604.12290)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/kBU7yjBds)
-
-Frontier-Eng is a benchmark for **generative optimization**: agents iteratively edit runnable engineering code, get feedback from frozen verifiers, and improve under a fixed interaction budget. The paper's central claim is simple: engineering performance is usually about the **best design you can discover within budget**, not average pass rate. Frontier-Eng therefore focuses on:
+This repository is a benchmark for **generative optimization**: agents iteratively edit runnable engineering code, read feedback from frozen verifiers, and improve under a fixed interaction budget. The benchmark emphasizes:
 
 - continuous reward signals instead of binary grading
 - real verifiers and simulators instead of judge models
 - improvement trajectories instead of single-shot answers
 
-The benchmark currently covers **47 tasks** across computing, quantum information, operations research, robotics and control, optics and communications, and physical sciences. The project homepage and paper frame it as a missing evaluation axis between pass/fail coding benchmarks and real engineering work: most engineering problems start from a feasible baseline and reward iterative improvement, not one-shot correctness.
-
+The released problem set currently covers **47 tasks** across computing, quantum information, operations research, robotics and control, optics and communications, and physical sciences. Most tasks start from a feasible baseline and reward iterative improvement rather than one-shot correctness.
 
 ## 0. Host Requirements
 
@@ -104,34 +99,4 @@ If you want the full `v1` problem set with normal optimization runs later, see [
 - Framework commands and task onboarding: [`frontier_eval/README.md`](frontier_eval/README.md)
 - Batch-running the released `v1` problem set: [`run.md`](run.md)
 - Full task list: [`TASK_DETAILS.md`](TASK_DETAILS.md)
-- Archived best solutions from published runs: [`baseline_archive/README.md`](baseline_archive/README.md)
-
-## Leaderboard
-
-Detailed leaderboard: [lab.einsia.ai/frontier-eng/leaderboard.html](https://lab.einsia.ai/frontier-eng/leaderboard.html)
-
-| Rank | Model | Average Rank |
-| :--: | :--- | --: |
-| 1 | GPT-5.4 | 3.54 |
-| 2 | Claude Opus 4.6 | 3.63 |
-| 3 | GLM-5 | 4.34 |
-| 4 | DeepSeek V3.2 | 4.76 |
-| 5 | Gemini 3.1 Pro Preview | 5.53 |
-| 6 | Grok 4.20 | 5.82 |
-| 7 | SEED 2.0 Pro | 5.86 |
-| 8 | Qwen3 Coder Next | 6.71 |
-
-## Contributing
-
-Contribution guidelines live in [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
-## Citation
-
-```bibtex
-@article{chi2026frontier,
-  title={Frontier-Eng: Benchmarking Self-Evolving Agents on Real-World Engineering Tasks with Generative Optimization},
-  author={Chi, Yizhe and Hong, Deyao and Jiang, Dapeng and Luo, Tianwei and Yang, Kaisen and Zhang, Boshi and Cao, Zhe and Fan, Xiaoyan and He, Bingxiang and Hao, Han and others},
-  journal={arXiv preprint arXiv:2604.12290},
-  year={2026}
-}
-```
+- Archived best solutions from recorded runs: [`baseline_archive/README.md`](baseline_archive/README.md)

@@ -2,20 +2,17 @@
 
 [English](README.md) | 简体中文
 
-[主页](https://lab.einsia.ai/frontier-eng/) · [arXiv](http://arxiv.org/abs/2604.12290) · [Discord](https://discord.gg/hxeVhZNN)
+本仓库是一个面向 **generative optimization** 的 benchmark：Agent 持续修改可运行的工程代码，读取只读 verifier 的反馈，并在固定预算内不断改进。
 
-Frontier-Eng 是一个面向 **generative optimization** 的 benchmark：Agent 不是一次性写出“标准答案”，而是持续修改可运行的工程代码，读取只读 verifier 的反馈，并在固定预算内不断改进。
-
-当前版本包含 **47 个任务**，覆盖计算系统、量子信息、运筹优化、机器人控制、光学通信、物理与工程设计。主页和论文的核心观点是：真实工程问题通常从一个可行 baseline 出发，价值来自持续优化，而不是 pass/fail。
+当前版本包含 **47 个任务**，覆盖计算系统、量子信息、运筹优化、机器人控制、光学通信、物理与工程设计。多数任务从可行 baseline 出发，强调在预算内迭代改进，而不是单次 pass/fail。
 
 ## 这个 benchmark 在测什么
 
-和传统 agent benchmark 相比，Frontier-Eng 更关注三件事：
+和传统 agent benchmark 相比，更关注三件事：
 
 - 连续分数，而不是二值对错
 - 真正的 verifier / simulator，而不是 judge model
 - 在预算内能把 baseline 推到多远，而不是平均通过率
-
 
 ## 0. Host Requirements
 
@@ -107,22 +104,3 @@ bash scripts/batch/validate_v1_task_envs.sh
 - `v1` 题集的批量运行说明：[`run_zh-CN.md`](run_zh-CN.md)
 - 完整任务列表：[`TASK_DETAILS_zh-CN.md`](TASK_DETAILS_zh-CN.md)
 - 历史实验最优代码存档：[`baseline_archive/README.md`](baseline_archive/README.md)
-
-## Leaderboard
-
-详细榜单见 [lab.einsia.ai/frontier-eng/leaderboard.html](https://lab.einsia.ai/frontier-eng/leaderboard.html)。
-
-| 排名 | Model | Average Rank |
-| :--: | :--- | --: |
-| 1 | Claude Opus 4.6 | 3.18 |
-| 2 | GLM-5 | 4.02 |
-| 3 | DeepSeek V3.2 | 4.41 |
-| 4 | Gemini 3.1 Pro Preview | 5.34 |
-| 5 | Grok 4.20 | 5.60 |
-| 6 | SEED 2.0 Pro | 5.63 |
-| 7 | GPT-5.4 | 5.68 |
-| 8 | Qwen3 Coder Next | 6.68 |
-
-## 贡献
-
-贡献指南见 [`CONTRIBUTING_zh-CN.md`](CONTRIBUTING_zh-CN.md)。
