@@ -306,7 +306,9 @@ def evaluate(
         else:
             artifacts["reference_pdf_error"] = (
                 f"reference PDF not bundled for license hygiene: {reference_pdf_path}. "
-                f"Use the official reference URL instead: {spec.reference_url}"
+                f"Use the official reference URL instead: {spec.reference_url}. "
+                "If you have rights to a local copy, place it at that path and rerun to "
+                "enable local text extraction."
             )
 
     if not benchmark_dir.is_dir() or not baseline_dir.is_dir() or not verification_dir.is_dir():
