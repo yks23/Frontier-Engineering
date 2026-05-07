@@ -30,6 +30,8 @@
 已汇总在 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
 仓库级归因说明见 [`NOTICE`](NOTICE)，标准第三方 license 文本放在
 [`LICENSES/third_party/`](LICENSES/third_party/)。
+Frontier-Engineering 原创贡献采用 [Apache-2.0](LICENSE)；第三方材料仍按
+notice 文件中记录的上游 license 处理。
 
 如果你想看更具体的宿主机准备步骤，包括 `Docker` / `Octave` 怎么装、哪些外部资产要单独准备，请先读 [`run_zh-CN.md`](run_zh-CN.md)。
 
