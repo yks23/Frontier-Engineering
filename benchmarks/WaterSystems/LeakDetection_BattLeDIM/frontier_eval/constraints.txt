@@ -1,0 +1,5 @@
+LeakDetection_BattLeDIM UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <instance.json> --output <alarms.json>`.
+3) Output alarms must contain start, end, zone_id, confidence.
+4) Higher combined_score is better.
