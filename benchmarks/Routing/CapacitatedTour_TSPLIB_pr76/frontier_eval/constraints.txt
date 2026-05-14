@@ -1,0 +1,4 @@
+TSPLIB TSP UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Output a Hamiltonian cycle containing each node exactly once.
+3) Higher combined_score is better.
