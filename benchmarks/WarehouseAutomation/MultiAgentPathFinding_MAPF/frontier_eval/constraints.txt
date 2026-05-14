@@ -1,0 +1,7 @@
+MultiAgentPathFinding_MAPF UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <instance.json> --output <paths.json>`.
+3) Candidate must output one path per agent.
+4) Paths must start and end at the required cells.
+5) Moves must be wait or one-step Manhattan moves.
+6) No obstacle collisions, vertex collisions, or edge-swap collisions are allowed.
