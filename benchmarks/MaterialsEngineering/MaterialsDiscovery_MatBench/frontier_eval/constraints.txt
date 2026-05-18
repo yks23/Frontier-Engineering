@@ -1,0 +1,6 @@
+MaterialsDiscovery_MatBench UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <candidates.json> --output <submission.json>`.
+3) Query budget must not be exceeded.
+4) Candidate ids must be valid and unique.
+5) Higher combined_score is better.

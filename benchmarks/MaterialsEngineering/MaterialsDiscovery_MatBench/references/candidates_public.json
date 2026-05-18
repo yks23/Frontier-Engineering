@@ -1,0 +1,102 @@
+{
+  "task_id": "matbench_small_v1",
+  "budget": 5,
+  "candidates": [
+    {
+      "candidate_id": "mat_001",
+      "features": [
+        0.8,
+        0.2,
+        0.5
+      ]
+    },
+    {
+      "candidate_id": "mat_002",
+      "features": [
+        0.4,
+        0.9,
+        0.3
+      ]
+    },
+    {
+      "candidate_id": "mat_003",
+      "features": [
+        0.2,
+        0.1,
+        0.7
+      ]
+    },
+    {
+      "candidate_id": "mat_004",
+      "features": [
+        0.7,
+        0.8,
+        0.6
+      ]
+    },
+    {
+      "candidate_id": "mat_005",
+      "features": [
+        0.9,
+        0.4,
+        0.8
+      ]
+    },
+    {
+      "candidate_id": "mat_006",
+      "features": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "candidate_id": "mat_007",
+      "features": [
+        0.3,
+        0.7,
+        0.2
+      ]
+    },
+    {
+      "candidate_id": "mat_008",
+      "features": [
+        0.85,
+        0.6,
+        0.9
+      ]
+    },
+    {
+      "candidate_id": "mat_009",
+      "features": [
+        0.1,
+        0.4,
+        0.6
+      ]
+    },
+    {
+      "candidate_id": "mat_010",
+      "features": [
+        0.95,
+        0.3,
+        0.7
+      ]
+    },
+    {
+      "candidate_id": "mat_011",
+      "features": [
+        0.65,
+        0.75,
+        0.55
+      ]
+    },
+    {
+      "candidate_id": "mat_012",
+      "features": [
+        0.55,
+        0.2,
+        0.95
+      ]
+    }
+  ]
+}
