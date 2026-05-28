@@ -1,0 +1,2 @@
+best_known_stations=3
+source=SALBP benchmark xlsx
