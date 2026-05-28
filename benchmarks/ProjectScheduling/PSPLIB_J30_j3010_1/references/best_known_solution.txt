@@ -1,0 +1,2 @@
+best_known_makespan=42
+source=j30opt.sm
