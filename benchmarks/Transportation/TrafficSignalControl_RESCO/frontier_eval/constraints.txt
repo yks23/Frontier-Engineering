@@ -1,0 +1,6 @@
+TrafficSignalControl_RESCO UnifiedTask constraints:
+1) Candidate must be a self-contained Python program at `scripts/init.py`.
+2) Evaluator calls the candidate as `python3 scripts/init.py --instance <instance.json> --output <signal_plan.json>`.
+3) Output phase sequence length must equal horizon.
+4) Phase values must be 0 or 1.
+5) Higher combined_score is better.
