@@ -1,0 +1,17 @@
+{
+  "site_id": "windfarm_small_v1",
+  "width": 100.0,
+  "height": 80.0,
+  "num_turbines": 5,
+  "min_spacing": 18.0,
+  "wind_directions": [
+    0,
+    45,
+    90
+  ],
+  "wind_weights": [
+    0.5,
+    0.2,
+    0.3
+  ]
+}
